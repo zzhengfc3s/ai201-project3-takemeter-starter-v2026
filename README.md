@@ -42,7 +42,7 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
-
+I picked the Options subreddit community, www.reddit.com/r/options/.
 
 ---
 
