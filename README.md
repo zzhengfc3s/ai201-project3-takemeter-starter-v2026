@@ -54,35 +54,87 @@ I picked the Options subreddit community, www.reddit.com/r/options/.
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `trade_log`
 
 **Definition:**
+Posts where the primary purpose is to report a specific options position that was opened, managed, or closed, including its entry, rationale, or P/L
 
 **Example 1:**
->
+>NVDA — right play, wrong expiration 🤦‍♀️
+
+r/options - NVDA — right play, wrong expiration 🤦‍♀️
+Bought 25 NVDA $225C 9/30 at $2.88, about $7.2k total.
+
+The play is a short-term sympathy run into MU earnings next week. My thinking is that if MU gets a pre-earnings run and semis stay strong, NVDA could catch some of that momentum.
+
+I picked the $225 strike because NVDA was trading around $225, so I wanted basically ATM calls rather than going far OTM.
+
+The dumb part: I bought 9/30 by mistake. I actually wanted more time because I don’t want theta eating me alive while waiting for the setup.
+
+Plan is to see what NVDA does Monday. If I get the move I’m looking for, I’ll close these and move into the expiration I originally wanted. If the setup breaks, I’m not planning to sit around praying until expiration.
+Until then, part of my risk management is basically hoping Trump stays the fuck away from social media this weekend.
 
 **Example 2:**
->
+>Papakong88 0DTE - Exit Plan Modification (October 16, 2026)
+In June, 2026 I changed my exit plan from a rollout to a buyback strategy. As a result of several buybacks, the income has been flat because each buyback cost several weeks of income. I changed the strategy back to a rollout on October 8. 
+Details of the October 8 rollout is in https://www.reddit.com/r/options/comments/1udyri5/comment/pexxs85/?context=3
+I have two more rollouts on October 14, 2026.
+Rollout #1:
+Roll the 29760 PS out 1 day and down 335 points to 29425 for 3.81 debit. (Buying back would have cost $10.)
+On the next day, the 29425 was rolled down 125 points to 29300 with same day expiration for 1.75 debit.
+The 29300 expired.
+Rollout #2:
+Roll the 29725 PS out 1 day and down 375 points to 29350 for 1.81 debit. (Buying back would have cost $8.)
+The 29350 expired.
+The cost of the rollouts were reduced by selling some junks.
 
-### `label_two`
+### `educational`
 
 **Definition:**
+Posts where the primary purpose is to ask for or give an explanation of how options mechanics or strategy concepts work
 
 **Example 1:**
->
+>Help understand calls on 2-3x leverage stocks
+As the title says, I’m looking for info on trading options on tickers such as RKLX or IONX. Rocketlab 2x and IonQ 2x. It seems like there is crazy reward for minimal risk but I must be missing something?
+
+Has anyone done trades with leveraged stocks or etfs and had success? or even horror stories?
+
+Thank you
 
 **Example 2:**
->
+>Questions about managing assignment exposure compared to max-loss risk
+Do you set a separate limit for potential assignment exposure on defined-risk options trades, in addition to your max-loss limit? If so, how do you measure it?
+
+For example, suppose I have a $100,000 account and limit each trade’s defined max loss to 1% ($1,000). I sell one Amazon Nov. 20, 2026 $230/$225 put credit spread for a potential $100 max profit and potential $400 max loss.
+
+The spread is within my max-loss rule. If the short $230 put is assigned, I could be required to buy 100 shares for $23,000, even though the spread’s defined max loss is much smaller.
+
+How would you, or do you, set a guardrail for potential assignment exposure, especially across multiple positions? For example, if 10 positions had a combined defined max loss of $10,000 but a gross assignment value of $150,000, how would you limit that exposure? Would you cap that assignment exposure at a percentage of your account (e.g. 30%), and limit the number or size of positions accordingly?
+
+Thank you!
+
+### `market_opinion`
+
+**Definition:**
+Posts where the primary purpose is to state a view or prediction about market direction, news, or conditions.
+
+**Example 1:**
+>Will most retail options trading be automated in 5 years?
+I still open most of my spreads by hand but I've started letting alerts handle exits and rolls. Brokers keep making it easier to hand off the boring parts. Feels like in a few years a lot of retail flow will just be rules running on their own. Anyone here already fully automated on options, or is it still mostly clicking buttons? What part would you never hand off?
+
+**Example 2:**
+>Let's short TTWO
+Nobody buy GTA 6 everybody just buy shorts or whatever (idk how it works)
 
 ### The hardest boundary
 
 **Which two labels:**
+trade_log and educational
 
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
-
-
+If a post includes specific options setup or actual trade executed but the primary intent is asking a question or clarification on options mechanics or strategy concept, it should be label'ed 'educational'. Only label a post as 'trade_log' if the primary intent is sharing aa trade execution, journal entry, setup breakdown, or profit/loss portfolio without seeking educational assistance.
 
 ---
 
@@ -163,8 +215,71 @@ of next unit's variance. -->
 **Moment 1**
 
 - *What I asked for:*
+Here are 3 labels and its definitions. Write eight posts that sit on my boundaries.
+
+trade_log: Posts that describes a specific options setup or actual trade executed
+educational: Posts that asks or answers questions about clarification on options mechanics or strategy concepts.
+market_opinion: Posts that comments on market direction predictions, news reactions, or general market conditions.
 - *What came back:*
+```
+Here are eight posts that sit on the boundaries between the labels. Each has a note on which two labels it straddles and why.
+
+1. trade_log / educational
+
+Opened a 45 DTE put credit spread on SPY, 520/515, for $1.35 credit. I always choose a short strike near 0.20 delta because it roughly maps to an 80% chance of expiring OTM. Does that delta-as-probability rule hold up, or is it too simplistic?
+
+Describes an actual trade, but the real question is about how delta relates to probability.
+
+2. trade_log / market_opinion
+
+Sold a covered call on my NVDA shares at the 140 strike for next Friday. Honestly I think this thing is topping out here after that run, so I’m happy to cap my upside for the premium.
+
+A specific executed trade, but the justification is a directional call on the stock.
+
+3. educational / market_opinion
+
+With VIX sitting under 14, is it still worth selling premium? I keep hearing that low IV means options are “cheap” and the market is complacent, but does low IV actually mean a move is coming?
+
+An options-mechanics question (IV and premium selling) wrapped in commentary on market conditions.
+
+4. trade_log / educational
+
+Got assigned on my short 50 put in AMD this morning, 100 shares at $50. Now I’m holding stock at a cost basis of $48.20 after the premium. Is it better to start selling covered calls right away or wait for a bounce?
+
+Reports a real assignment and its outcome, but the ask is a strategy-concept question.
+
+5. market_opinion / educational
+
+Everyone says the Fed cutting rates is bullish, but I’ve noticed call options on the indexes often get crushed right after the announcement even when the market rallies. Why does that happen, and does it mean a rally can’t be trusted?
+
+Reacts to a news event and market behavior, but the core is explaining IV crush.
+
+6. trade_log / market_opinion
+
+Closed my SPX iron condor for a 40% profit yesterday. The market just chopped sideways all week like I expected, and I think this range-bound grind continues through month end. Planning to put on another one Monday.
+
+Documents a closed trade, but spends equal weight forecasting where the market goes next.
+
+7. educational / trade_log
+
+Say I buy a TSLA 250 call for $8 with the stock at 245, and it’s up to 252 at expiration. Do I make money? Walking through my own example, I think I’m at breakeven at 258, so I’d lose $6 on this.
+
+A hypothetical-style mechanics question framed with concrete numbers that read like a real position.
+
+8. market_opinion / educational
+
+People keep saying the market is “pricing in” a soft landing. Isn’t that just saying options implied moves already reflect the consensus? Trying to understand if there’s any edge in fading consensus when skew looks like this.
+
+A general market-conditions comment that leans on an options-concept question about implied moves and skew.
+
+If you’d like, I can write more that target one specific pair of labels, or make them harder by removing the giveaway keywords.
+```
 - *What I changed:*
+I try grounding the definiton better with the post's primary purpose.
+
+trade_log: Posts where the primary purpose is to report a specific options position that was opened, managed, or closed, including its entry, rationale, or P/L.
+educational: Posts where the primary purpose is to ask for or give an explanation of how options mechanics or strategy concepts work
+market_opinion: Posts where the primary purpose is to state a view or prediction about market direction, news, or conditions.
 
 **Moment 2**
 
