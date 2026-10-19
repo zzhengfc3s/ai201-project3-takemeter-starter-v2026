@@ -54,11 +54,11 @@ whether you hit them:
 ## 1.
 
 <!-- Your criterion. It must name a number. -->
-
+Overall classification accuracy is at least 67%.
 
 
 **Why this target:**
-
+A random guesser has 33.3% accuracy across 3 labels, so I'm targeting double that accuracy at 67%.
 
 
 ---
@@ -66,11 +66,11 @@ whether you hit them:
 ## 2.
 
 <!-- Your criterion. -->
-
+No single label accounts for more than 60% of the total dataset.
 
 
 **Why this target:**
-
+The notebook does 70/15/15 split, 10% buffer under the 70% otherwise the model could be wrongly fine-tuned to just guess the major label.
 
 
 ---
@@ -78,11 +78,11 @@ whether you hit them:
 ## 3.
 
 <!-- Your criterion. -->
-
+When another human or AI model labels against the 20 cold labeled posts, atleast 80% should be in agreement.
 
 
 **Why this target:**
-
+Initially targeted 85% because boundary posts and 7 out of 8 post that the AI stress-tested against my labels definition were label'ed. I lowered the targeted to 80% from how I used AI portion to increase safe buffer on small sample size of 20 cold posts.
 
 
 ---
@@ -90,11 +90,11 @@ whether you hit them:
 ## 4.
 
 <!-- Your criterion. -->
-
+When a model has high confidence on a prediction, it's accuracy should be atleast 85%
 
 
 **Why this target:**
-
+I target 85% because a model with high confidence on it's prediction should have high accuracy to be useful. 15% safe buffer and it's about 15% more accurate than the baseline 67% overall accuracy.
 
 
 ---
@@ -102,11 +102,11 @@ whether you hit them:
 ## 5.
 
 <!-- Your criterion. -->
-
+The precision score for trade_log label is atleast 90%
 
 
 **Why this target:**
-
+I targeted 90% for trade_log because the label definition and the decision rule should make this a almost binary yes or no label, 10% for safe edge case buffer.
 
 
 ---

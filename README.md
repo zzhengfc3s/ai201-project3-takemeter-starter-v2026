@@ -284,8 +284,42 @@ market_opinion: Posts where the primary purpose is to state a view or prediction
 **Moment 2**
 
 - *What I asked for:*
+Here are five acceptance criteria with targets, for a text classifier I have not trained yet. For each target, give me one reason it might turn out too easy and one reason it might turn out too hard. Don't tell me which is more likely and don't suggest different numbers.
+
+1.Overall classification accuracy is at least 67%.
+2.No single label accounts for more than 60% of the total dataset.
+3.When another human or AI model labels against the 20 cold labeled posts, atleast 85% should be in agreement.
+4.When a model has high confidence on a label, it's accuracy should be atleast 85%
+5.The precision score for trade_log label is atleast 90%
 - *What came back:*
+```
+1. Overall accuracy ≥ 67%
+
+Too easy: If the label distribution is skewed, a model that mostly predicts the majority class can clear 67% without learning anything useful. Accuracy also rewards the common labels and hides failures on rare ones.
+Too hard: If the labels are subjective or overlap (a post could reasonably be two categories), the ceiling is set by label noise, and no model can reliably exceed what the annotators themselves agree on.
+
+2. No single label > 60% of the dataset
+
+Too easy: This constrains the dataset, not the classifier. It’s satisfied by how the data was collected or sampled, even if the classes are trivially separable or the minority labels are tiny but still nominally “enough.”
+Too hard: If the real-world population is naturally dominated by one kind of post (say, most posts are chatter), reaching 60% or less may require heavy oversampling or hunting for rare examples, which can be slow and can distort how representative the data is.
+
+3. ≥ 85% agreement on the 20 cold labeled posts
+
+Too easy: With only 20 posts, one or two lucky or unlucky items swing the number a lot, and if the cold posts happen to be clear-cut examples, agreement will be high regardless of how well your label definitions hold up on messy cases.
+Too hard: 85% of 20 means at most 3 disagreements, and with a small sample plus ambiguous label boundaries, a couple of genuinely borderline posts can sink you even when the labeling scheme is reasonable. Different human or model labelers can also interpret the guidelines differently from you.
+
+4. High-confidence predictions ≥ 85% accurate
+
+Too easy: If “high confidence” is defined by a strict threshold, only a small slice of easy, prototypical examples may qualify, so the accuracy of that slice looks great while most predictions are never covered by the criterion.
+Too hard: Models are often poorly calibrated, especially overconfident on out-of-distribution or ambiguous posts, so confident errors can pull accuracy in that bucket below 85%. If the threshold is loose and lets in many predictions, the bucket gets diluted with errors.
+
+5. Precision for trade_log ≥ 90%
+
+Too easy: If trade_log has distinctive surface features (tickers, entry/exit prices, specific formatting), a conservative model that only predicts it when those cues appear can hit high precision, and precision ignores how many true trade_log posts it misses.
+Too hard: If trade_log is a minority class or shares vocabulary with neighboring labels (trade ideas, commentary, recaps), even a few false positives drag precision down, and 90% leaves little room for confusion with those lookalike categories.
+```
 - *What I changed:*
+I lowered criterion 3 from 85% to 80% because it might be too hard on small sample size.
 
 **Pre-labelling disclosure:**
 
