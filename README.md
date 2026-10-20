@@ -42,7 +42,7 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
-I picked the Trading Options subreddit community, .
+I picked the Trading Options subreddit community, and my classifier sorts posts into 4 different categories. Trade Logs for trades executed and/or showing portfolio. Market Opinion for speculations on the market directions, news, or conditions. Educational for providing advise/strategy to the community or asking advise about trade mechanics or concepts from the community. And lastly Platform for opinions, questions, or venting on brokers or third-party apps/services.
 
 ---
 
@@ -303,15 +303,34 @@ EDIT: clarified that I'm holding SPY shares as collateral
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
 **Base model:**
+device: cpu  (CPU)
+torch:  2.14.1+cpu
 
 **Settings:** <!-- epochs, learning rate, batch size, seed -->
+4 labels: educational, trade_log, market_opinion, platform
+seed 42, 3 epochs, lr 2e-05, batch 16
 
 **Anything I changed from the defaults, and why:**
+No change to defaults
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
+train 139  ·  val 31  ·  test 30
 
+                train  val  test
+label                           
+educational        80   18    18
+trade_log          19    5     4
+market_opinion     20    4     4
+platform           20    4     4
+
+[note] 'trade_log' has only 4 examples in the test split.
+[note] 'market_opinion' has only 4 examples in the test split.
+[note] 'platform' has only 4 examples in the test split.
+
+A metric computed on that few examples moves a lot between seeds.
+Write that down now — next unit it's a diagnosis, not a surprise.
 
 
 ---
