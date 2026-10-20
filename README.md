@@ -61,16 +61,11 @@ Posts where the primary purpose is to report a specific options position that wa
 
 **Example 1:**
 >NVDA — right play, wrong expiration 🤦‍♀️
-
 r/options - NVDA — right play, wrong expiration 🤦‍♀️
 Bought 25 NVDA $225C 9/30 at $2.88, about $7.2k total.
-
 The play is a short-term sympathy run into MU earnings next week. My thinking is that if MU gets a pre-earnings run and semis stay strong, NVDA could catch some of that momentum.
-
 I picked the $225 strike because NVDA was trading around $225, so I wanted basically ATM calls rather than going far OTM.
-
 The dumb part: I bought 9/30 by mistake. I actually wanted more time because I don’t want theta eating me alive while waiting for the setup.
-
 Plan is to see what NVDA does Monday. If I get the move I’m looking for, I’ll close these and move into the expiration I originally wanted. If the setup breaks, I’m not planning to sit around praying until expiration.
 Until then, part of my risk management is basically hoping Trump stays the fuck away from social media this weekend.
 
@@ -96,21 +91,15 @@ Posts where the primary purpose is to ask for or give an explanation of how opti
 **Example 1:**
 >Help understand calls on 2-3x leverage stocks
 As the title says, I’m looking for info on trading options on tickers such as RKLX or IONX. Rocketlab 2x and IonQ 2x. It seems like there is crazy reward for minimal risk but I must be missing something?
-
 Has anyone done trades with leveraged stocks or etfs and had success? or even horror stories?
-
 Thank you
 
 **Example 2:**
 >Questions about managing assignment exposure compared to max-loss risk
 Do you set a separate limit for potential assignment exposure on defined-risk options trades, in addition to your max-loss limit? If so, how do you measure it?
-
 For example, suppose I have a $100,000 account and limit each trade’s defined max loss to 1% ($1,000). I sell one Amazon Nov. 20, 2026 $230/$225 put credit spread for a potential $100 max profit and potential $400 max loss.
-
 The spread is within my max-loss rule. If the short $230 put is assigned, I could be required to buy 100 shares for $23,000, even though the spread’s defined max loss is much smaller.
-
 How would you, or do you, set a guardrail for potential assignment exposure, especially across multiple positions? For example, if 10 positions had a combined defined max loss of $10,000 but a gross assignment value of $150,000, how would you limit that exposure? Would you cap that assignment exposure at a percentage of your account (e.g. 30%), and limit the number or size of positions accordingly?
-
 Thank you!
 
 ### `market_opinion`
@@ -137,15 +126,12 @@ On my initial exploration of this forum, I only noticed 1 of this label. So I ju
 **Example 1:**
 >CBOE Outage?
 For some reason CBOE is now returning 20+ hour old data for their delayed quotes. Usually it's 15 min delayed but right now it's showing yesterday right before the close which is a while ago.
-
 Curious if others have the same issue
 
 **Example 2:**
 >Do not download the new Tasty trade 2.0 Desktop major Platform Update
 Was logging on to Tasty this morning and saw there was an update to their desktop platform. I downloaded it and when it opened I did not understand what was on my screen. It was F'ing horrible! The clean interface I once had was replaced with a totally unuseable GUI
-
 Called support and they walked me through how to revert back. Unfortunately this clean version is going away at some point. The new desktop interface was bad enough for me to contemplate leaving tasty
-
 These design nerds have fucked up a really nice interface
 
 ### The hardest boundary
@@ -166,11 +152,13 @@ If a post includes specific options setup or actual trade executed but the prima
      cases. -->
 
 **Where the posts came from:**
+
 www.reddit.com/r/options/
-Cold labelled 20, then had AI labelled the rest using the label definitions and decision rule. Read the 180 posts that AI labelled and corrected any post that I thought we wrongly labelled and change note from "pre-labelled" to "corrected". Added a 4th label 'platform' after i reviewed 10+ posts that didn't fit into the 3 original labels.
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
+
+Cold labelled 20, then had AI labelled the rest using the label definitions and decision rule. Read the 180 posts that AI labelled and corrected any post that I thought we wrongly labelled and change note from "pre-labelled" to "corrected". Added a 4th label 'platform' after i reviewed 10+ posts that didn't fit into the 3 original labels.
 
 **Counts per label:**
 
@@ -188,27 +176,16 @@ Say so plainly — the disclosure is required, not penalised. -->
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
->
-Anyone else scalp QQQ/SPX options with 20–90 second holds? Analyzing my results after a +20% month.
+> Anyone else scalp QQQ/SPX options with 20–90 second holds? Analyzing my results after a +20% month.
 So I've been back to day trading after taking 5 years off and did some aggregation of my results after about a month. My strategy so far has been basically take a quick win , never average up and never let runners run, just look for the next trade. While it's been successful overall (+20%) and overall generally not a ton of risk per trade, I struggled for sure with averaging down sometimes (multiple times) and then holding on for the trade to turn. The statistics on my under 1 minute trades was quite eye opening.
-
 I guess what I'm asking is -- does anyone else use this type of strategy?
-
 I'm aware of my leaks and now and I'm not going to change up too much yet until I have more profit but definitely just need to learn to kill trades if they aren't working faster.
-
 Weirdly a lot of my bread and butter are off hour SPX scalps because it tends to bounce around a lot and I just buy 2-3 contracts and sell for a 0.20 or 0.30 profit and repeat.
-
 Also looking for like minded folks to talk this strategy if there is a discord of like minded folks.
-
 Thanks!
-
 **Long-option trades by holding time — through October 16, 2026**
-
 P/L includes estimated fees.
-
 **No averaging down**
-
 | Holding time | Trades | Win rate | Total P/L | Average P/L | Median P/L |
 |:--|--:|--:|--:|--:|--:|
 | Under 1 min | 332 | 96.4% | +$54,664.72 | +$164.65 | +$84.12 |
@@ -217,13 +194,9 @@ P/L includes estimated fees.
 | 5–15 min | 33 | 39.4% | -$8,403.51 | -$254.65 | -$62.55 |
 | 15–60 min | 2 | 100.0% | +$809.08 | +$404.54 | +$404.54 |
 | **Overall** | **618** | **83.8%** | **+$65,114.05** | **+$105.36** | **+$73.75** |
-
 Median holding time: **54 seconds**.
-
 **Averaging down**
-
 Averaging down means another opening order below the average cost of the remaining position. Partial fills of the same order count as one entry.
-
 | Holding time | Trades | Win rate | Total P/L | Average P/L | Median P/L |
 |:--|--:|--:|--:|--:|--:|
 | Under 1 min | 1 | 100.0% | +$46.08 | +$46.08 | +$46.08 |
@@ -232,32 +205,24 @@ Averaging down means another opening order below the average cost of the remaini
 | 5–15 min | 37 | 32.4% | -$31,083.97 | -$840.11 | -$527.84 |
 | 15–60 min | 7 | 28.6% | -$10,971.72 | -$1,567.39 | -$632.51 |
 | **Overall** | **102** | **55.9%** | **-$43,223.12** | **-$423.76** | **+$33.24** |
-
 Median holding time: **4.53 minutes**.
-> *Could have been:*
+
+*Could have been:*
 > trade_log vs educational
-> *I chose, because:*
-  I chose trade_log because while it did ask a question but it wasn't asking a question or clarifiation about the trade mechanics or setup. The question was more of this is my trade log, anyone else do this too? Sort of validation of trading strategy.
+
+*I chose, because:*
+> I chose trade_log because while it did ask a question but it wasn't asking a question or clarifiation about the trade mechanics or setup. The question was more of this is my trade log, anyone else do this too? Sort of validation of trading strategy.
 
 **2.**
-> *The post:*
->
-$UBER — Sold the 69P, 39 DTE, $1.75 credit
+> $UBER — Sold the 69P, 39 DTE, $1.75 credit
 Sold the $69 put on UBER, 39 DTE, for $1.75 credit ($175 per contract).
-
 Thesis:
-
 • $69.02 has held as support on both the daily and weekly timeframe over the past year
-
 • $80.56 has capped as resistance over the same period — currently trading in that range at $72.41
 • Recent insider buying at UBER
-
 • Disclosed filings show Trump has also bought UBER shares this year
-
 • Selling premium at a level with a track record of holding, rather than betting directionally
-
 Trade details:
-
 • Strike: $69P
 • Expiration: 39 DTE
 • Credit received: $1.75
@@ -265,36 +230,30 @@ Trade details:
 • Breakeven: $67.25
 • Max profit: $175/contract if UBER stays above $69 at expiry
 • Max loss: assignment at $69 (effective cost basis $67.25) if support breaks
-
 Only sizing this as a position I'm fine being assigned on — not treating $69 as a guaranteed floor. NFA, DYODD.
-> *Could have been:*
+
+*Could have been:*
 > trade_log vs market_opinion
-> *I chose, because:*
-  I choose trade_log because while author mentioned Trump buying the shares (market_opinion), I believe the trade was more based on technical analysis of the price movement and Trump buying was more of a confirmation bias.
+
+*I chose, because:*
+> I choose trade_log because while author mentioned Trump buying the shares (market_opinion), I believe the trade was more based on technical analysis of the price movement and Trump buying was more of a confirmation bias.
 
 **3.**
-> *The post:*
->
-Please critique my "boring" portfolio
+> Please critique my "boring" portfolio
 Please give any constructive feedback. If there is something I'm missing please let me know. Much appreciated.
-
 Been doing this strategy for almost 2 years now. I think it's really boring. I don't do any analysis; just 2 minutes each day to place trades. Account value is in the mid 6-figures.
-
 Part 1: Selling almost-LEAP CCs on ULTY. UTLY did have a reverse split a few months back, but the weekly dividends are still on track to recoup my original investment in a few months.
-
 Part 2: Selling 0dte CSPs on SPY. 90% of the trading days they just expire worthless. The 10% they expire ITM I just roll them. I'm earning about 50% using margins to cover. Nothing ever gets assigned so I'm not paying any margin interest. I'm selling 4 orders per day so earning $300-500 in daily premium.
-
 Part 3: Holding SWVXX (until I have enough cash to cover more SPY shares, which I use as collaterals for margins. I also have some other tickers I bought a long time ago for collaterals as well. don't plan on selling any shares within the next 10 years).
-
 Again, I don't consider it exciting. I don't feel any emotions when selling the SPY puts. It just feels like another task like checking emails or taking out the trash.
-
 Happy trading!
-
 EDIT: clarified that I'm holding SPY shares as collateral
-> *Could have been:*
+
+*Could have been:*
 > trade_log vs educational
-> *I chose, because:*
-  This is a hard one and I'm still somewhat on the fence. I choose trade_log because while the author did as to provide constructive feedback, but it wasn't a question about a trade mechanic or if something was set up wrong and also the author have been trading this for 2 years, sounds somewhat experience already. Post sounds more like here's my portfolio, what you guys think? than here's my trade, will IV crush eat/errode my profits, etc...
+
+*I chose, because:*
+> This is a hard one and I'm still somewhat on the fence. I choose trade_log because while the author did as to provide constructive feedback, but it wasn't a question about a trade mechanic or if something was set up wrong and also the author have been trading this for 2 years, sounds somewhat experience already. Post sounds more like here's my portfolio, what you guys think? than here's my trade, will IV crush eat/errode my profits, etc...
 
 ---
 
@@ -318,12 +277,11 @@ split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
 train 139  ·  val 31  ·  test 30
 
-                train  val  test
-label                           
-educational        80   18    18
-trade_log          19    5     4
-market_opinion     20    4     4
-platform           20    4     4
+| label | train | val | test |
+| educational | 80 | 18 | 18 |
+| trade_log | 19 | 5 | 4 |
+| market_opinion | 20 | 4 | 4 |
+| platform | 20 | 4 | 4 |
 
 [note] 'trade_log' has only 4 examples in the test split.
 [note] 'market_opinion' has only 4 examples in the test split.
@@ -347,11 +305,14 @@ Write that down now — next unit it's a diagnosis, not a surprise.
 **Moment 1**
 
 - *What I asked for:*
+```
 Here are 3 labels and its definitions. Write eight posts that sit on my boundaries.
 
 trade_log: Posts that describes a specific options setup or actual trade executed
 educational: Posts that asks or answers questions about clarification on options mechanics or strategy concepts.
 market_opinion: Posts that comments on market direction predictions, news reactions, or general market conditions.
+```
+
 - *What came back:*
 ```
 Here are eight posts that sit on the boundaries between the labels. Each has a note on which two labels it straddles and why.
@@ -407,15 +368,18 @@ A general market-conditions comment that leans on an options-concept question ab
 If you’d like, I can write more that target one specific pair of labels, or make them harder by removing the giveaway keywords.
 ```
 - *What I changed:*
+```
 I try grounding the definiton better with the post's primary purpose.
 
 trade_log: Posts where the primary purpose is to report a specific options position that was opened, managed, or closed, including its entry, rationale, or P/L.
 educational: Posts where the primary purpose is to ask for or give an explanation of how options mechanics or strategy concepts work
 market_opinion: Posts where the primary purpose is to state a view or prediction about market direction, news, or conditions.
+```
 
 **Moment 2**
 
 - *What I asked for:*
+```
 Here are five acceptance criteria with targets, for a text classifier I have not trained yet. For each target, give me one reason it might turn out too easy and one reason it might turn out too hard. Don't tell me which is more likely and don't suggest different numbers.
 
 1.Overall classification accuracy is at least 67%.
@@ -423,6 +387,8 @@ Here are five acceptance criteria with targets, for a text classifier I have not
 3.When another human or AI model labels against the 20 cold labeled posts, atleast 85% should be in agreement.
 4.When a model has high confidence on a label, it's accuracy should be atleast 85%
 5.The precision score for trade_log label is atleast 90%
+```
+
 - *What came back:*
 ```
 1. Overall accuracy ≥ 67%
@@ -450,10 +416,14 @@ Too hard: Models are often poorly calibrated, especially overconfident on out-of
 Too easy: If trade_log has distinctive surface features (tickers, entry/exit prices, specific formatting), a conservative model that only predicts it when those cues appear can hit high precision, and precision ignores how many true trade_log posts it misses.
 Too hard: If trade_log is a minority class or shares vocabulary with neighboring labels (trade ideas, commentary, recaps), even a few false positives drag precision down, and 90% leaves little room for confusion with those lookalike categories.
 ```
+
 - *What I changed:*
+```
 I lowered criterion 3 from 85% to 80% because it might be too hard on small sample size.
+```
 
 **Pre-labelling disclosure:**
+I used Claude to pre-label 180/200 posts, however I did manually review each one and corrected as necessary. They are marked pre-labelled for AI, and corrected for manually changed.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
