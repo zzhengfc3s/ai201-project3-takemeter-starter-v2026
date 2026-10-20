@@ -278,6 +278,7 @@ of next unit's variance. -->
 train 139  ·  val 31  ·  test 30
 
 | label | train | val | test |
+|---|---|---|---|
 | educational | 80 | 18 | 18 |
 | trade_log | 19 | 5 | 4 |
 | market_opinion | 20 | 4 | 4 |
