@@ -42,7 +42,7 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
-I picked the Options subreddit community, www.reddit.com/r/options/.
+I picked the Trading Options subreddit community, .
 
 ---
 
@@ -126,6 +126,28 @@ I still open most of my spreads by hand but I've started letting alerts handle e
 >Let's short TTWO
 Nobody buy GTA 6 everybody just buy shorts or whatever (idk how it works)
 
+### `platform` - STRETCH FEATURE 4th Label
+
+**Definition:**
+Posts where the primary purpose is to state a view, opinion, issues, or ask questions related to broker or third-party platform.
+
+**Reason:**
+On my initial exploration of this forum, I only noticed 1 of this label. So I just ignore it thinking it was a one off or very rare occurance. However after collecting the 200 most recent posts, this type of posts kept showing up more often so I added as a 4th label otherwise this may/will introduce more noise in the accuracy.
+
+**Example 1:**
+>CBOE Outage?
+For some reason CBOE is now returning 20+ hour old data for their delayed quotes. Usually it's 15 min delayed but right now it's showing yesterday right before the close which is a while ago.
+
+Curious if others have the same issue
+
+**Example 2:**
+>Do not download the new Tasty trade 2.0 Desktop major Platform Update
+Was logging on to Tasty this morning and saw there was an update to their desktop platform. I downloaded it and when it opened I did not understand what was on my screen. It was F'ing horrible! The clean interface I once had was replaced with a totally unuseable GUI
+
+Called support and they walked me through how to revert back. Unfortunately this clean version is going away at some point. The new desktop interface was bad enough for me to contemplate leaving tasty
+
+These design nerds have fucked up a really nice interface
+
 ### The hardest boundary
 
 **Which two labels:**
@@ -144,6 +166,8 @@ If a post includes specific options setup or actual trade executed but the prima
      cases. -->
 
 **Where the posts came from:**
+www.reddit.com/r/options/
+Cold labelled 20, then had AI labelled the rest using the label definitions and decision rule. Read the 180 posts that AI labelled and corrected any post that I thought we wrongly labelled and change note from "pre-labelled" to "corrected". Added a 4th label 'platform' after i reviewed 10+ posts that didn't fit into the 3 original labels.
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
@@ -152,10 +176,11 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| educational | 116 | 58% |
+| platform | 28 | 14% |
+| market_opinion | 28 | 14% |
+| trade_log | 28 | 14% |
+| **Total** | 200 | 100% |
 
 **Three hard cases**
 
@@ -165,23 +190,111 @@ Say so plainly — the disclosure is required, not penalised. -->
 **1.**
 > *The post:*
 >
+Anyone else scalp QQQ/SPX options with 20–90 second holds? Analyzing my results after a +20% month.
+So I've been back to day trading after taking 5 years off and did some aggregation of my results after about a month. My strategy so far has been basically take a quick win , never average up and never let runners run, just look for the next trade. While it's been successful overall (+20%) and overall generally not a ton of risk per trade, I struggled for sure with averaging down sometimes (multiple times) and then holding on for the trade to turn. The statistics on my under 1 minute trades was quite eye opening.
+
+I guess what I'm asking is -- does anyone else use this type of strategy?
+
+I'm aware of my leaks and now and I'm not going to change up too much yet until I have more profit but definitely just need to learn to kill trades if they aren't working faster.
+
+Weirdly a lot of my bread and butter are off hour SPX scalps because it tends to bounce around a lot and I just buy 2-3 contracts and sell for a 0.20 or 0.30 profit and repeat.
+
+Also looking for like minded folks to talk this strategy if there is a discord of like minded folks.
+
+Thanks!
+
+**Long-option trades by holding time — through October 16, 2026**
+
+P/L includes estimated fees.
+
+**No averaging down**
+
+| Holding time | Trades | Win rate | Total P/L | Average P/L | Median P/L |
+|:--|--:|--:|--:|--:|--:|
+| Under 1 min | 332 | 96.4% | +$54,664.72 | +$164.65 | +$84.12 |
+| 1–3 min | 194 | 76.3% | +$15,070.02 | +$77.68 | +$54.12 |
+| 3–5 min | 57 | 61.4% | +$2,973.74 | +$52.17 | +$24.12 |
+| 5–15 min | 33 | 39.4% | -$8,403.51 | -$254.65 | -$62.55 |
+| 15–60 min | 2 | 100.0% | +$809.08 | +$404.54 | +$404.54 |
+| **Overall** | **618** | **83.8%** | **+$65,114.05** | **+$105.36** | **+$73.75** |
+
+Median holding time: **54 seconds**.
+
+**Averaging down**
+
+Averaging down means another opening order below the average cost of the remaining position. Partial fills of the same order count as one entry.
+
+| Holding time | Trades | Win rate | Total P/L | Average P/L | Median P/L |
+|:--|--:|--:|--:|--:|--:|
+| Under 1 min | 1 | 100.0% | +$46.08 | +$46.08 | +$46.08 |
+| 1–3 min | 33 | 78.8% | +$476.99 | +$14.45 | +$69.76 |
+| 3–5 min | 24 | 66.7% | -$1,690.50 | -$70.44 | +$113.59 |
+| 5–15 min | 37 | 32.4% | -$31,083.97 | -$840.11 | -$527.84 |
+| 15–60 min | 7 | 28.6% | -$10,971.72 | -$1,567.39 | -$632.51 |
+| **Overall** | **102** | **55.9%** | **-$43,223.12** | **-$423.76** | **+$33.24** |
+
+Median holding time: **4.53 minutes**.
 > *Could have been:*
->
+> trade_log vs educational
 > *I chose, because:*
+  I chose trade_log because while it did ask a question but it wasn't asking a question or clarifiation about the trade mechanics or setup. The question was more of this is my trade log, anyone else do this too? Sort of validation of trading strategy.
 
 **2.**
 > *The post:*
 >
+$UBER — Sold the 69P, 39 DTE, $1.75 credit
+Sold the $69 put on UBER, 39 DTE, for $1.75 credit ($175 per contract).
+
+Thesis:
+
+• $69.02 has held as support on both the daily and weekly timeframe over the past year
+
+• $80.56 has capped as resistance over the same period — currently trading in that range at $72.41
+• Recent insider buying at UBER
+
+• Disclosed filings show Trump has also bought UBER shares this year
+
+• Selling premium at a level with a track record of holding, rather than betting directionally
+
+Trade details:
+
+• Strike: $69P
+• Expiration: 39 DTE
+• Credit received: $1.75
+• Current price: $72.41
+• Breakeven: $67.25
+• Max profit: $175/contract if UBER stays above $69 at expiry
+• Max loss: assignment at $69 (effective cost basis $67.25) if support breaks
+
+Only sizing this as a position I'm fine being assigned on — not treating $69 as a guaranteed floor. NFA, DYODD.
 > *Could have been:*
->
+> trade_log vs market_opinion
 > *I chose, because:*
+  I choose trade_log because while author mentioned Trump buying the shares (market_opinion), I believe the trade was more based on technical analysis of the price movement and Trump buying was more of a confirmation bias.
 
 **3.**
 > *The post:*
 >
+Please critique my "boring" portfolio
+Please give any constructive feedback. If there is something I'm missing please let me know. Much appreciated.
+
+Been doing this strategy for almost 2 years now. I think it's really boring. I don't do any analysis; just 2 minutes each day to place trades. Account value is in the mid 6-figures.
+
+Part 1: Selling almost-LEAP CCs on ULTY. UTLY did have a reverse split a few months back, but the weekly dividends are still on track to recoup my original investment in a few months.
+
+Part 2: Selling 0dte CSPs on SPY. 90% of the trading days they just expire worthless. The 10% they expire ITM I just roll them. I'm earning about 50% using margins to cover. Nothing ever gets assigned so I'm not paying any margin interest. I'm selling 4 orders per day so earning $300-500 in daily premium.
+
+Part 3: Holding SWVXX (until I have enough cash to cover more SPY shares, which I use as collaterals for margins. I also have some other tickers I bought a long time ago for collaterals as well. don't plan on selling any shares within the next 10 years).
+
+Again, I don't consider it exciting. I don't feel any emotions when selling the SPY puts. It just feels like another task like checking emails or taking out the trash.
+
+Happy trading!
+
+EDIT: clarified that I'm holding SPY shares as collateral
 > *Could have been:*
->
+> trade_log vs educational
 > *I chose, because:*
+  This is a hard one and I'm still somewhat on the fence. I choose trade_log because while the author did as to provide constructive feedback, but it wasn't a question about a trade mechanic or if something was set up wrong and also the author have been trading this for 2 years, sounds somewhat experience already. Post sounds more like here's my portfolio, what you guys think? than here's my trade, will IV crush eat/errode my profits, etc...
 
 ---
 
