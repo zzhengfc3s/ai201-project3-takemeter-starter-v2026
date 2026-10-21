@@ -1,0 +1,190 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": false,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.36666666666666664,
+    "f1_macro": 0.2859090909090909,
+    "per_label": {
+      "educational": {
+        "precision": 0.8571428571428571,
+        "recall": 0.3333333333333333,
+        "f1": 0.48,
+        "support": 18
+      },
+      "market_opinion": {
+        "precision": 0.2857142857142857,
+        "recall": 0.5,
+        "f1": 0.36363636363636365,
+        "support": 4
+      },
+      "platform": {
+        "precision": 0.1875,
+        "recall": 0.75,
+        "f1": 0.3,
+        "support": 4
+      },
+      "trade_log": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "Updated strategy - wheeling SPY\nThanks for the tremendous feedback on my other post: Please critique my \"boring\" portfolio : r/options\n\nI've made some tweaks, but still have some lingering questions.\n\n---------------------------------------------------------------------\n\nCapital: ~$50k cash + $25K margin\n\nStep 1: Sell slightly OTM 0dte CSP\n\nStep 1A: expry worthless, repeat step 1\n\nStep 1B: expry ITM, roll to earliest OTM put for credit, wait for expry and go to 1A/1B as appropriate\n\nStep 2: if assigned, sell slightly OTM 0dte CC\n\nStep 2A: expry worthless, repeat step 2\n\nStep 2B: expry ITM, if above cost basis, accept assignment; if below cost basis, roll to earliest OTM call for credit\n\nThis has produced approximately 25% for the past 2 years. It's very low effort; I spend less than 2 minutes each day. It doesn't work every day, but even when SPY goes down and I roll a few days out, I don't even check it again until date of expry.\n\nQuestion(s):\n\nQ1: I used to park the cash in long SPY, but others have said that I have single sided risk. So now the money to secure is sitting in cash. Plus I get additional purchasing power.\n\nDo I have another option to generate slightly more interest on the $50k cash?",
+      "gold": "educational",
+      "predicted": "platform"
+    },
+    {
+      "text": "GME again\ni gotta find Ryan Cohen's phone number so i can ask for a loan to buy calls. he is still messing with my head, buying more shares with his millions $$$$. pumping his lively hood.",
+      "gold": "market_opinion",
+      "predicted": "platform"
+    },
+    {
+      "text": "10 calls into earnings. Either genius tomorrow or \u201cdeleted\u201d by Friday.\n\nr/options - 10 calls into earnings. Either genius tomorrow or \u201cdeleted\u201d by Friday.\nPage 1 (Current page)\nPage 2\n\n\nItem 1 of 2\nMy DD: Oracle good. Calls cheap. Brain said send it.\n\n10 ORCL $170C, 9/11 exp, $6.15 avg. Earnings play.\n\nThesis: bullish on cloud/AI growth and guidance. I\u2019m expecting a move above the market-implied earnings move.\n\nEntry: $6.15 premium. Breakeven at expiration: $176.15. Max loss: $6,150. No averaging down. If ORCL doesn\u2019t get the post-earnings move I\u2019m expecting, I\u2019m closing rather than holding and praying through expiration.\nMain risk is IV crush + only 2 DTE.\nBasically: high-risk, defined-risk earnings bet.\nYes, slightly unhinged.",
+      "gold": "trade_log",
+      "predicted": "platform"
+    },
+    {
+      "text": "Is there anything to be learned from open interest?\nr/options - Is there anything to be learned from open interest?\nI would like to gain a better understanding of how options influence market moves.\n\nI was tracking the open interest on QQQ 09/18 contracts this week to see if I could learn anything. I don't think I learned anything.\n\nOne thing I did notice is the massive open interest increase on the put side above $710 on the day of expiration.\n\nIs there anything to be learned from data like this? The market made some massive moves going into the end of the week. It was a big expiration week and there were some big news events that influenced the moves.\n\nFor the record, I don't trade options. I trade futures. I use open interest to set and trade off levels.",
+      "gold": "educational",
+      "predicted": "platform"
+    },
+    {
+      "text": "Anyone else trade SPX broken-wing butterflies? Here\u2019s the structure I use\nI mostly trade income trades on SPX because it removes a few headaches (I moved out from SPY): it\u2019s cash-settled, so there\u2019s no early assignment surprises.\n\nThe structure I use, which is called SPX Best (by myoptionsedge), combines a broken wing butterfly with a vertical spread. The butterfly (with one wing wider than the other) has, by definition, defined risk and positive theta, so it earns as time passes while the SPX stays inside the structure (the negative of this strcuture is that it is Vega negative - this is an issue when there are corrections/IV increases). The uneven wings deliver a credit at open. It is positioned that to the upside has no risk and has a maximum loss you can see before you enter it.\n\nAdding a vertical (a short call spread) placed above the SPX price as a \u201csoft hedge\u201d, brings in a little extra credit and adds some negative delta to offset the butterfly\u2019s directional lean (+Delta), with its own risk still capped. The trade-off is that you give up big upside in exchange for predictability. The trade adjustments are flexible enough to manage Delta risk along the trade life. This trade uses longer dated expirations at open (70-80DTE). This gives you slower decay but more room to adjust and return consistency.\n\nDoes anyone have experience trading broken wing butterflies?\n\nWhich underlyings do you use? (I did not trade this in RUT but does anyone have experience trading RUT butterflies?)",
+      "gold": "educational",
+      "predicted": "market_opinion"
+    },
+    {
+      "text": "Front Month IV problems in double calendars\nI\u2019m currently running a double calendar which I opened on Monday of this week, my shorts expire this Friday and my longs expire the next Friday. Price in the underlying has barely moved, IV has inflated proportionately on both my longs and my shorts and the value of the calendar has not moved an inch. When I traded single calendars, the theta decay would most definitely have kicked in especially when price revisits but that\u2019s not happening here. For those of you who trade calendars, how would you recommend I fix this problem? I can provide details as necessary but this is a general overview!",
+      "gold": "educational",
+      "predicted": "educational"
+    },
+    {
+      "text": "Crash protection got more expensive on Friday during the rally\nr/options - Crash protection got more expensive on Friday during the rally\nThe only volatility gauge that was up on Friday is one that measures crash risk. The SKEW index, which tracks what traders are paying for protection against a large, sudden drop, rose 5%. That is the 95th percentile of its past year. On the same day, the VIX fell 11.21% and the VVIX, which measures the volatility of the VIX itself, fell 11.09%. options traders used Friday\u2019s calm to buy put insurance ahead of Wednesday\u2019s Fed decision.",
+      "gold": "market_opinion",
+      "predicted": "market_opinion"
+    },
+    {
+      "text": "Long dated vertical call spreads\nWhat are some downsides to buying a long dated call spreads on a single name or ETF after a major pullback?\n\nFor example if I buy a call spread on a single name with a $100 spread, my break even is 15% current market price, and the short end of the spread is close to the current market price.\n\nIf I am right, I make roughly 60% in a year, and if wrong I am holding an extremely beaten down stock. I could potentially also close out the short in that scenario and keep the long open for more risk.\n\nLiquidity isnt great, and I will lose something on the buy and sell. Theta isnt great, and the delta is like 30. So a large move up in the short term will not result in a large gain immediately.",
+      "gold": "educational",
+      "predicted": "market_opinion"
+    },
+    {
+      "text": "Days To Expiration\nIn options trading there are a lot of variables that are out of your control. So I say \u201ccontrol the controllables\u201d. Days To Expiration (DTE) is controllable upon trade entry. Time is a constant. You can count on the sun rising tomorrow. You can count on 10 DTE today being 9 DTE tomorrow. It is certain, and there are few certainties in this business. You may remember the Rolling Stones song \u201cTime is On My Side\u201c, well, when you are selling OTM (Out of The Money) Puts that is definitely the case. Sometimes, we all may wish that time would slow down in our personal lives, but in our trading lives the passage of time benefits us daily through Theta decay. Theta decay accelerates as expiration approaches. When you sell a Put Credit Spread at 28-32 DTE, you capture the steepest part of the Theta decay curve. Each day that passes erodes the value of the options you sold, putting money in your pocket without the underlying needing to move in your favor.\n\nWhat DTE are you guys typically trading?",
+      "gold": "educational",
+      "predicted": "educational"
+    },
+    {
+      "text": "Option selling\nWhen your all selling options are you selling even if the stock is below its 200 sma?\n\nI find it beaten up stocks are good to sell but then again stocks like Adobe keep getting beat",
+      "gold": "educational",
+      "predicted": "platform"
+    },
+    {
+      "text": "Are there any brokers that dont auto-sell options before close?\nIf you don't have the liquidity if your options were to exercise ITM. Robinhood closes your positions automatically 30 minutes before close. Chase closes your positions an hour before close. Any brokers that dont do this?",
+      "gold": "platform",
+      "predicted": "platform"
+    },
+    {
+      "text": "Shorting Volatility\nCould I get a consensus on some credit condors for earnings on big companies like NKE that shouldn't have a ton of price movement? Is there a risk piece that im missing other than large PA?",
+      "gold": "educational",
+      "predicted": "platform"
+    },
+    {
+      "text": "NVDA \u2014 right play, wrong expiration \ud83e\udd26\u200d\u2640\ufe0f\n\nr/options - NVDA \u2014 right play, wrong expiration \ud83e\udd26\u200d\u2640\ufe0f\nPage 1 (Current page)\nPage 2\n\n\nItem 1 of 2\nBought 25 NVDA $225C 9/30 at $2.88, about $7.2k total.\n\nThe play is a short-term sympathy run into MU earnings next week. My thinking is that if MU gets a pre-earnings run and semis stay strong, NVDA could catch some of that momentum.\n\nI picked the $225 strike because NVDA was trading around $225, so I wanted basically ATM calls rather than going far OTM.\n\nThe dumb part: I bought 9/30 by mistake. I actually wanted more time because I don\u2019t want theta eating me alive while waiting for the setup.\n\nPlan is to see what NVDA does Monday. If I get the move I\u2019m looking for, I\u2019ll close these and move into the expiration I originally wanted. If the setup breaks, I\u2019m not planning to sit around praying until expiration.\nUntil then, part of my risk management is basically hoping Trump stays the fuck away from social media this weekend.",
+      "gold": "trade_log",
+      "predicted": "market_opinion"
+    },
+    {
+      "text": "Let AI agents deploy options bots on paper desks. Worst one: long puts on TSLA/AMD/META/NFLX, 53 tra\nI let AI agents deploy options bots on paper desks and read the ledger today. Here's the honest table, no cropping.\n\nThe worst agent-built bot buys puts on TSLA, AMD, META and NFLX. 53 trades, \u2212$145,438. It's paused now. That took a pause call in the ledger, the AI never did it on its own.\n\nSecond worst buys calls on AVGO, MU and SMH. 69 trades, \u2212$140,504. Also paused. Third buys puts on NFLX, META, GOOG. 61 trades, \u2212$66,658, still running.\n\nAcross the whole lot: 781 bots deployed by agents, 18,845 closed trades, 8,992 winners, \u2212$1,335,857 of paper money. 773 of the 781 went out without a backtest, because the backtest tool is optional and an optional tool gets skipped.\n\nThe best one is also a premium buyer, calls on SPY/AAPL/NVDA/TSLA, +$24,392 on 8 trades. I'm not drawing a conclusion from 8 trades and neither should you.\n\nThe thing I'd actually argue for isn't the strategy, it's the leash. A key opens one desk and nothing else. It carries a scope: read, backtest, deploy. And there's a kill switch that freezes every agent on the account; the agent can see it's frozen but there's no tool to unfreeze, only a signed-in human can. So the AI can never let itself back in.\n\nI built this. Paper money only, there's no broker anywhere in it. If you want a specific bot's fill list I can pull it.",
+      "gold": "trade_log",
+      "predicted": "platform"
+    },
+    {
+      "text": "It All Comes Down to This\n\nI have built up a nice little nest egg of 40k and tomorrow I intend on throwing 50% of it at spy options tomorrow. I understand the risk and accept it. Here is the twist. I am conducting an experiment to see if the community can accurately call a coin flip twice in a row. I\u2019m going to let you all call the shot for day one of two. Calls or puts?\n\nUPDATE: thank you all for your decision, you just made me 19400 in 30 mins. I love you all.",
+      "gold": "trade_log",
+      "predicted": "educational"
+    },
+    {
+      "text": "Fed Call arising due to expiring ITM option processed over weekend\nA long ended up ITM that I expected to expire OTM. It was valued at 0.01 so obviously it didn't get bought. Unfortunately between market close and processing, it ended up very slightly ITM.\n\nThis caused my account to be short ~$1K.\n\nNormally FINRA 4210(b)(4)/05 allows you to immediately sell said security as a remedy/exemption. But seeing how it processed over the weekend, would you be allowed a similar exemption at market open?",
+      "gold": "educational",
+      "predicted": "platform"
+    },
+    {
+      "text": "Tyson Foods\nThe President says he\u2019ll be allowing ranchers and farmers to process and sell their own product on the open market. Tyson controls about 85% of the meat processing industry and this could cost them billions. Puts? Or is there an underlying reason why this wouldn\u2019t affect Tyson?",
+      "gold": "market_opinion",
+      "predicted": "platform"
+    },
+    {
+      "text": "Tested the 'big squeeze before takeoff' idea: 516 symbols, 5 years. Tight ranges predict more quiet\nEveryone has heard the folk model: when a name goes dead quiet and the range compresses, it is coiling before a big move. We wanted to know if the tightest compressions actually launch, so we tested it.\n\nDesign\n\nUniverse: 516 optionable symbols, 5 years of dailies (~650k symbol-days)\n\nCompression: 10-day average true range %, ranked against the symbol's OWN trailing year, split into deciles. Decile 0 = this name is in the tightest 10% of its own recent history (not vs other symbols)\n\nForward measure: biggest absolute close-to-close move over the next 5 sessions\n\nSplit-half: everything before June 2024 vs after. A result has to hold in both halves or it is noise.\n\nResult: monotone in both halves, the wrong way for the launch thesis\n\ncompression decile        median 5d max move (h1 / h2)        P(move >=5%)\n0 (tightest)        3.0% / 3.1%        25% / 29%\n5        3.8% / 3.6%        36% / 36%\n9 (loudest)        4.4% / 4.6%        44% / 46%\nThe tightest decile has the SMALLEST forward moves, perfectly monotone across all ten deciles, in both halves. Quiet names stay quiet, loud names stay loud. Volatility clusters - that is the real phenomenon, and it is one of the oldest results out there. Direction is flat too (P(up) runs 52-56% across deciles), so compression also tells you nothing about which way.\n\nBefore you flip it and buy options on the loud names: implied vol already knows. We measured implied vs realized separately and IV overshoots what actually happens in both tails, so \"loud stays loud\" is largely priced.\n\nWhat actually preceded launches in our record was not shape, it was flow - repeated large premium hitting the same name across days, and catalysts. Breakout systems that use compression only as a shortlist and trigger on the actual break are a different claim than \"tight = about to launch at a fixed horizon\" - we only tested the latter.\n\nHappy to share methodology details. Poke holes.",
+      "gold": "educational",
+      "predicted": "educational"
+    },
+    {
+      "text": "Placing more than 390 option trades in a day\nWhat brokerage allows it? Did any of you exceed that number and not get notified? Or which brokerages flagged you? Thank you for any input.\n\nEdit: is this place dominated by bots? I asked for concrete names and instances and all I got are LLM type of definitions and vague responses. Wtf?",
+      "gold": "educational",
+      "predicted": "platform"
+    },
+    {
+      "text": "Weekly PMCC Strategy\nGreetings\n\nI\u2019ve been playing around with an idea that really seems too good to be true so I\u2019m sure it has to be lol. I\u2019d love to hear thoughts about what I\u2019m missing here.\n\nMy assumption is that in the long term I\u2019m bullish on equities and precious metals. Of course the market is unstable and anything could happen, however there are only a few times that the Nasdaq has been negative for more than a one year period. Of course there was the dot com crash however I do think that there has been a fundamental shift in our economy making a repeat of that unlikely.\n\nSo this is what I\u2019m considering. Layering (monthly) 0.7 Delta LEAPS on the QQQ, and GLD as far out as possible (>800 days) then selling weekly ATM or 1 strike OTM calls against them.\n\n1 DTE if the underlying has risen ITM close the entire spread and establish. This way I do not have assignment risk. If the underlying drops resell a new ATM call but always staying above my cost basis.\n\nLooking at an example as I write this the QQQ 15Dec28 685 is at a 155 mid. The 10Sep2026 719 (ATM) is 5.34.\n\nIf the QQQ is flat to up that extrinsic arbratage is about 3.2% a week. Since my leap is a higher delta I\u2019m in no jeopardy if the QQQ rises, I\u2019ll only make money. If the QQQ drops I\u2019ll harvest the extensic and be able to sell a strike as low as 714 next week due to my lowered cost basis make the same 3% and wash and repeat. This annualized out to be 156% a year at 3% a week.\n\nNow if the market is in a sustained downturn soon after establishing my position I might not be able to keep selling calls under my basis and I\u2019ll have to wait for a recovery. The worst case would be of course there not being a recovery for multiple years, but I do hold a long term bullish bias.\n\nIn a great case in 30 successful calls I\u2019d have a risk free leap that even in an extended downturn could sell calls against.\n\nHow would you compare this idea to the standard PMCC selling .3 delta calls and closing/rolling for a loss when needed. What am I missing as there has to be something.\n\nThanks all",
+      "gold": "educational",
+      "predicted": "educational"
+    },
+    {
+      "text": "Help understand calls on 2-3x leverage stocks\nAs the title says, I\u2019m looking for info on trading options on tickers such as RKLX or IONX. Rocketlab 2x and IonQ 2x. It seems like there is crazy reward for minimal risk but I must be missing something?\n\nHas anyone done trades with leveraged stocks or etfs and had success? or even horror stories?\n\nThank you",
+      "gold": "educational",
+      "predicted": "platform"
+    },
+    {
+      "text": "LWLG 5X account by Jan 2029\nBLUF: LWLG debit spread 7c/10c Jan 2029 easiest 5x you\u2019ve ever seen.\n\nYou may or may not have heard of LWLG, but you have heard of data transfer. What\u2019s the bottleneck? Converting data into light.\nLWLG is the solution.\nThe 400G and beyond switch that all the AI and data centers are salivating for.\nIt\u2019s pre-revenue but it\u2019s the best solution available (if data centers embrace the technology).\nAnyway, would you like to 5x your position?\n7c/10c Jan 2029 debit spread cost .50\n$250 profit per $50 if the stock hits $10. (5X)\nStock just went up about 12% in the past week. (4.94-5.79)\nStock hit $18.71 in May of 2026 (only 5 months ago)\n\nTLDR: if the stock even hits within 54% of what it was 5 MONTHS AGO between now and January 2029 (over 2 years away) you will 5X the position. The risk/reward is crazy.",
+      "gold": "market_opinion",
+      "predicted": "market_opinion"
+    },
+    {
+      "text": "Hey everyone,Like many of you heading into earnings season, I kept running into options calculator\nHey everyone,\n\nLike many of you heading into earnings season, I kept running into options calculators that were either paywalled, bloated with ads, or didn't properly show post-earnings IV crush.\n\nI spent the weekend building a clean, lightweight web app: **OptionsStrat Pro**.\n\n\ud83d\udd17 Live Tool: https://vhomesai.github.io/options-strat-pro/\n\nKey features I built into it:\n\n\u2022 1-Click Strategy Presets (Long Strangles, Straddles, Iron Condors, Covered Calls, Debit Spreads)\n\n\u2022 Dynamic Post-Earnings IV Crush Simulator (see exactly how much extrinsic value deflates if volatility drops 30-50%)\n\n\u2022 Expected Move & Overnight P&L Scenario Matrix\n\n\u2022 Real-time Black-Scholes Greeks (Delta, Gamma, Theta decay, Vega)\n\n\u2022 Client-side only (0 tracking, 0 ads, runs instantly in the browser)\n\nIt's completely free. Would love your honest feedback on what features or presets I should add next!",
+      "gold": "platform",
+      "predicted": "platform"
+    },
+    {
+      "text": "Anybody trading MRNA? Sold today 270 call in Nov for 11.7\nThis is relatively aggressive and on large side position for my account. I still like it how the stock had a nice run, it's part of nasdaq and the index being mean reverted, and it has annualized return on capital (estimated) that I call ridiculous territory.\n\nEverything else checks out as well, IV rank and IV are high, realized is lagging. Delta could be smaller but okey whatever agent picked with all the data it had. Liquidity is average, but still filled pretty fast.\n\nI think it has the most expensive options right now, even more expensive than AI stocks.\n\nAnybody else trading MRNA? Any advise what to expect or how to handle it beyond standard thresholds?",
+      "gold": "educational",
+      "predicted": "market_opinion"
+    },
+    {
+      "text": "Credit Spreads Risk\nIm having trouble understanding the risk on a bull put spread. I though they were defined hard capped risk. Because for example I sell a 170 put and buy a 165 put. On wealthsimple which im using it requires a margin account. I thought risk was defined. What if price is trading at 167 and i get assigned and my long put is not in the money. Everything expires and Im left 17K in debt. Is this possible or am I missing something?",
+      "gold": "educational",
+      "predicted": "platform"
+    },
+    {
+      "text": "ADD + TICK + OBV: a 3-gauge scalping check\n[Video of trade rules]\nI made this short animation to explain a simple filter for 1-minute and 5-minute scalps. The idea is that you only trade when three gauges agree, and each gauge has one job.\nThe three gauges\n\n$ADD on the 5-minute: picks the side $ADD is the number of NYSE stocks going up minus the number going down, as a running total for the day.\n\nAbove +500: most stocks are rising, so only look for longs (calls). Below \u2212500: only look for shorts (puts). In between: the market has no clear direction. Same-day options lose value in chop, so skip it.\n\n2. OBV on the 5-minute: checks the fuel OBV (On-Balance Volume) is a running tally of volume. Add the bar\u2019s volume when it closes up, subtract it when it closes down. It doesn\u2019t show who was buying or selling aggressively, only whether volume has been on the up bars or the down bars.\n\nFor a long, you want OBV sloping up with price. If price makes a new high but OBV makes a lower high, that\u2019s a divergence. The move has less volume behind it, so don\u2019t add new longs.\n\n3. $TICK on the 1-minute: times the entry $TICK is the number of stocks ticking up minus the number ticking down, right now. It\u2019s fast and noisy.\n\nIn a long setup, wait for $TICK to dip to around 0 and turn back up. That\u2019s the entry window. When it spikes toward +1,000, that\u2019s usually a place to take profit, not to chase. Readings past \u00b11,000 are rare.\n\nThe check, in order\n\n5-min $ADD beyond \u00b1500 \u2192 pick the side 5-min OBV slopes the same way, no divergence \u2192 volume agrees 1-min $TICK dips to 0 and turns \u2192 enter Get out if $TICK hits \u00b11,000, OBV starts diverging, price breaks the 1-min swing low, or $ADD slips back inside \u00b1500\n\nIf any one gauge disagrees, there\u2019s no trade.\n\nCaveats\n\nThe \u00b1500 and \u00b11,000 levels are common rules of thumb, not magic numbers. Test them against your own charts first. In a strong trend, a divergence can go nowhere for a long time. That\u2019s why the exit rules matter more than the entry. The charts in the video are illustrations, not a real trading session. Nothing here is financial advice.\n\nQuestion: for anyone who scalps with breadth, do you use $ADD as a hard filter like this, or more as background context? I\u2019m curious whether people find the 5-min/1-min split too slow or too fast.",
+      "gold": "educational",
+      "predicted": "educational"
+    },
+    {
+      "text": "Which brokerage is good for international traders and has a dependable API for third party devs?\nWe are looking to add support for another brokerage to the Optionsmith trading platform because we currently support Schwab accounts only -- and have many folks who want to use the platform but they are in countries where Schwab isn't available. If you are a trader in one of these countries, which brokerage is preferred?\n\nNote: IBKR's API is not viable for this.",
+      "gold": "platform",
+      "predicted": "platform"
+    },
+    {
+      "text": "Why can E*TRADE fill my 2-leg covered-call rolls at prices where IBKR, Schwab, TradeStation cannot?\nI have been doing side-by-side testing of 1-contract covered-call rolls at several brokers.\n\nThe options were approximately 30 DTE. I submitted essentially identical 2-leg complex limit orders at approximately the same time and adjusted the net price in $0.01 increments.\n\nIn repeated tests, E*TRADE was able to fill these rolls at net prices where the same orders at IBKR, Schwab and TradeStation remained unfilled. The difference was repeatable enough that it did not appear to be just a single lucky fill.\n\nI am specifically talking about native 2-leg complex orders (buy-to-close the existing call and sell-to-open the new call), not manually legging into the position.\n\nHas anyone else done similar side-by-side testing of covered-call roll execution across brokers and observed a consistent difference? If so, which brokers have given you execution comparable to E*TRADE for small complex orders?",
+      "gold": "platform",
+      "predicted": "market_opinion"
+    },
+    {
+      "text": "1st time buying leap GOOG\nHi guys, I am looking into starting trading options, specifically Leap call options. I am not interested in gambling with 0dte or any sorts of stuff like that. I watched a lot of videos on Leap calls and when to buy and all sorts of indicators. GOOG is now sitting at its 200 days moving average, and under the 20 days low bollinger bands. I am looking into buying the ITM 300$ call sept 17 with a delta of around 0.70. Since it\u2019s my first time, I wanted to get some advice before buying since it\u2019s still a huge premium to pay. I wanted you guys opinions on Leaps. Thanks",
+      "gold": "educational",
+      "predicted": "educational"
+    },
+    {
+      "text": "Early retirement has me rethinking options trading\nI'm 43. I Inherited wealth and retired in my thirties. I Learned options for mental stimulation, built my own method, done well\n\nLosing my wife two years ago changed my outlook on time. Financially secure, so profit is no longer the point. I love the mental work of options, but wonder if I want lifelong daily market monitoring\n\nFor those who've traded options for years, what made you stick with it, scale back, or walk away? Did you move toward more conservative strategies or focus on other parts of life?\n\nI'd appreciate hearing about your experiences!",
+      "gold": "educational",
+      "predicted": "platform"
+    }
+  ]
+}

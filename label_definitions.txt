@@ -5,6 +5,7 @@
 #
 # Delete the examples below and put yours in.
 
-analysis: makes an argument backed by a specific, checkable fact
-hot_take: a confident claim with no support offered
-reaction: an immediate response to something that just happened
+trade_log: Posts where the primary purpose is to report a specific options position that was opened, managed, or closed, including its entry, rationale, or P/L
+educational: Posts where the primary purpose is to ask for or give an explanation of how options mechanics or strategy concepts work
+market_opinion: Posts where the primary purpose is to state a view or prediction about market direction, news, or conditions.
+platform: Posts where the primary purpose is to state a view, opinion, issues, or ask questions related to broker or third-party platform.

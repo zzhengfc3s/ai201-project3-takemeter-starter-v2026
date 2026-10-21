@@ -441,19 +441,22 @@ I used Claude to pre-label 180/200 posts, however I did manually review each one
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.367 | 0.600 | +0.233 |
+| Macro F1 | 0.405 | 0.188 | -0.218 |
+| F1 — `educational` | 0.364 | 0.750 | +0.386 |
+| F1 — `market_opinion` | 0.286 | 0.000 | -0.286 |
+| F1 — `platform` | 0.750 | 0.000 | -0.750 |
+| F1 — `trade_log` | 0.222 | 0.000 | -0.222 |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
+I think the overall accuracy and educational F1 will be higher/beat because it has the most samples collected.
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
-
+My prediction came true, overall accuracy and educational F1 both were higher on the trained model vs baseline. However the other 3 labels F1 were all 0. My guess is because the sample in the test split is too low, 4 sample for each of the 3 in test split.
 
 
 ---
