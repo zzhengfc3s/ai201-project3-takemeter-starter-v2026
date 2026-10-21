@@ -262,6 +262,7 @@ EDIT: clarified that I'm holding SPY shares as collateral
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
 **Base model:**
+base_model: distilbert-base-uncased
 device: cpu  (CPU)
 torch:  2.14.1+cpu
 

@@ -54,11 +54,13 @@ whether you hit them:
 ## 1.
 
 <!-- Your criterion. It must name a number. -->
-Overall classification accuracy is at least 67%.
+Original: Overall classification accuracy is at least 67%.
+Revised: Overall classification accuracy is at least 50%
 
 
 **Why this target:**
-A random guesser has 33.3% accuracy across 3 labels, so I'm targeting double that accuracy at 67%.
+Original: A random guesser has 33.3% accuracy across 3 labels, so I'm targeting double that accuracy at 67%.
+Revised: A random guesser has 25% accuracy across 4 labels, so I'm targeting double that accuracy at 50%. Also the test split for 3 of the label only have 4 examples so low sample size to test against, may/probably will affect the accuracy. Note: Change this based on Unit 5 submission feedback.
 
 
 ---
@@ -90,11 +92,13 @@ Initially targeted 85% because boundary posts and 7 out of 8 post that the AI st
 ## 4.
 
 <!-- Your criterion. -->
-When a model has high confidence on a prediction, it's accuracy should be atleast 85%
+Original: When a model has high confidence on a prediction, it's accuracy should be atleast 85%
+Revised: When a model has high confidence (> 0.80) on a prediction, it's accuracy should be atleast 85%
 
 
 **Why this target:**
-I target 85% because a model with high confidence on it's prediction should have high accuracy to be useful. 15% safe buffer and it's about 15% more accurate than the baseline 67% overall accuracy.
+Original: I target 85% because a model with high confidence on it's prediction should have high accuracy to be useful. 15% safe buffer and it's about 15% more accurate than the baseline 67% overall accuracy.
+Revised: Same as original but added (> 0.80) confidence score based on Unit 5 submission feedback
 
 
 ---
