@@ -466,6 +466,15 @@ My prediction came true, overall accuracy and educational F1 both were higher on
 <!-- Five criteria across three seeds. The notebook's section 6 prints the
      spread table; the Target and Verdict columns are yours. -->
 
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.600 | 0.600 | 0.600 | 0.000 |
+| Macro F1 | 0.188 | 0.188 | 0.188 | 0.000 |
+| F1 — `educational` | 0.750 | 0.750 | 0.750 | 0.000 |
+| F1 — `trade_log` | 0.000 | 0.000 | 0.000 | 0.000 |
+| F1 — `market_opinion` | 0.000 | 0.000 | 0.000 | 0.000 |
+| F1 — `platform` | 0.000 | 0.000 | 0.000 | 0.000 |
+
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
 | 1.  |  |  |  |  |  |
@@ -479,18 +488,18 @@ My prediction came true, overall accuracy and educational F1 both were higher on
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
-|---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| true \ predicted | educational | trade_log | market_opinion | platform |
+|---|---|---|---|---|
+| **educational** | 18 | 0 | 0 | 0 |
+| **trade_log** | 4 | 0 | 0 | 0 |
+| **market_opinion** | 4 | 0 | 0 | 0 |
+| **platform** | 4 | 0 | 0 | 0 |
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
-
-
+The biggest off-diagonal number is 4 (for all 3 other labels). The model guessed educational for all the test samples, not enough samples for the other labels is my guess.
 
 ---
 
