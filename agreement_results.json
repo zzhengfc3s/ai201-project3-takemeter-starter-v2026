@@ -1,0 +1,13 @@
+{
+  "compared": 30,
+  "agreed": 29,
+  "agreement_rate": 0.9666666666666667,
+  "disagreements": [
+    {
+      "text": "Watching the last 400 of that and I had to stand up. Still standing up actually.",
+      "staff": "reaction",
+      "mine": "nan"
+    }
+  ],
+  "staff_posts_not_in_mine": 0
+}

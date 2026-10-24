@@ -539,7 +539,7 @@ The biggest off-diagonal number is 4 (for all 3 other labels). The model guessed
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 29 / 30 = 97%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -563,16 +563,17 @@ The biggest off-diagonal number is 4 (for all 3 other labels). The model guessed
 
 **1.**
 > *The post:*
->
+> Watching the last 400 of that and I had to stand up. Still standing up actually.
 > *Staff said / I said:*
->
+> Staff said reaction, I said nothing (I accidentially forgot to label this one)
 > *My call, and why:*
->
+> I would have labelled this reaction too.
 > *Which pile:*
+> None of the 3 piles
 
 **2.**
 > *The post:*
->
+> N/A
 > *Staff said / I said:*
 >
 > *My call, and why:*
@@ -581,7 +582,7 @@ The biggest off-diagonal number is 4 (for all 3 other labels). The model guessed
 
 **What the pattern in my disagreements tells me:**
 
-
+Nothing. I made a mistake and forgot to label one of the post.
 
 ---
 
