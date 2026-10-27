@@ -94,11 +94,13 @@ Initially targeted 85% because boundary posts and 7 out of 8 post that the AI st
 <!-- Your criterion. -->
 Original: When a model has high confidence on a prediction, it's accuracy should be atleast 85%
 Revised: When a model has high confidence (> 0.80) on a prediction, it's accuracy should be atleast 85%
+Revised 2: The accuracy of the most confident third should atleast be 85%.
 
 
 **Why this target:**
 Original: I target 85% because a model with high confidence on it's prediction should have high accuracy to be useful. 15% safe buffer and it's about 15% more accurate than the baseline 67% overall accuracy.
 Revised: Same as original but added (> 0.80) confidence score based on Unit 5 submission feedback
+Revised 2: The idea and intent is the same with the same target of 85%. However instead of a single confidence score which I'm not sure if I can extract/edit the notebook without affecting the future test runs, I will use the confidence result data that I actually have which is most confident third.
 
 
 ---

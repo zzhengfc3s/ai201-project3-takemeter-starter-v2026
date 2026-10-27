@@ -477,11 +477,11 @@ My prediction came true, overall accuracy and educational F1 both were higher on
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall classification accuracy is at least 50% | 0.5 | 0.6 | 0.6 | 0.6 | 3/3 |
+| 2. No single label accounts for more than 60% of the total dataset. | 0.6 | 0.6 | 0.6 | 0.6 | 3/3 |
+| 3. When another human or AI model labels against the 20 cold labeled posts, atleast 80% should be in agreement. | 0.8 | 0.8 | 0.8 | 0.8 | 3/3 |
+| 4. The accuracy of the most confident third should atleast be 85%. | 0.85 | 0.7 | 0.7 | 0.8 | 0/3 |
+| 5. The precision score for trade_log label is atleast 90% | 0.9 | 0.0 | 0.0 | 0.0 | 0/3 |
 
 ### Confusion matrix
 
@@ -510,11 +510,11 @@ The biggest off-diagonal number is 4 (for all 3 other labels). The model guessed
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall classification accuracy is at least 50% | 3/3 | MET | Overall accuracy was 60% > 50% Target |
+| 2 | No single label accounts for more than 60% of the total dataset. | 3/3 | 3/3 MET | All 3 seeds, highest label is 18/30 = 60% in the test split |
+| 3 | When another human or AI model labels against the 20 cold labeled posts, atleast 80% should be in agreement. | 3/3 | 3/3 MET | This one test is same for all 3 runs (seed independent) and just met the threshold at 80% |
+| 4 | The accuracy of the most confident third should atleast be 85%. | 3/3 | 0/3 MISSED | Accuracy were below 85% on all 3 runs, although close to 85%. |
+| 5 | The precision score for trade_log label is atleast 90% | 3/3 | 0/3 MISSED | All trade_log precision for the 3 runs were 0, so MISSED at 0/3 |
 
 **Diagnoses**
 
@@ -527,7 +527,13 @@ The biggest off-diagonal number is 4 (for all 3 other labels). The model guessed
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
 
+Both of the miss is a model problem, and not a label problem because of the 97% agreement report and Critera 3 meeting target.
 
+Criteria 4: Cause - A task the model can't reach from this much/lack of data; With criteria 5 failing, and mean when right ranging around 0.5-0.56. I deduce that the model doesn't have enough data for the other labels to have high confidence thus reducing it's overall accuracy of the most confident third.
+Criteria 5: Cause - Too few examples for a label; With only 4 test split examples of `trade_log`, this causes a majority class collapse for the model for every run thus resulting in precision score of 0.
+
+Note:
+Criteria 3: I had a friend label the cold posts based on my label definitions and decision rule, see `friend_labels.csv`. While it did just pass the threshold at 80%, I can see this is an area where I can tightening the labels definitons and possible additional decision rule further to improve the fine-tuning. And I think 20 sample size may be a bit too low, I think 30 is a better sample size like Milestone 3 because 1 difference in label is 5% difference in agreement rate is a bit too much.
 
 ---
 
@@ -569,7 +575,7 @@ The biggest off-diagonal number is 4 (for all 3 other labels). The model guessed
 > *My call, and why:*
 > I would have labelled this reaction too.
 > *Which pile:*
-> None of the 3 piles
+> Maybe Pile (a)?
 
 **2.**
 > *The post:*
@@ -582,7 +588,7 @@ The biggest off-diagonal number is 4 (for all 3 other labels). The model guessed
 
 **What the pattern in my disagreements tells me:**
 
-Nothing. I made a mistake and forgot to label one of the post.
+I should not have a labelling issue since my agreement rate is 97% with the 1/30 being an oversight/human-error on my end.
 
 ---
 
@@ -596,11 +602,11 @@ Nothing. I made a mistake and forgot to label one of the post.
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall classification accuracy is at least 50% |  |  |  |  |  |
+| 2. No single label accounts for more than 60% of the total dataset. |  |  |  |  |  |
+| 3. When another human or AI model labels against the 20 cold labeled posts, atleast 80% should be in agreement. |  |  |  |  |  |
+| 4. The accuracy of the most confident third should atleast be 85%. |  |  |  |  |  |
+| 5. The precision score for trade_log label is atleast 90% |  |  |  |  |  |
 
 **Did it help, and how do I know:**
 
