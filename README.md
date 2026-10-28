@@ -510,7 +510,7 @@ The biggest off-diagonal number is 4 (for all 3 other labels). The model guessed
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 | Overall classification accuracy is at least 50% | 3/3 | MET | Overall accuracy was 60% > 50% Target |
+| 1 | Overall classification accuracy is at least 50% | 3/3 | 3/3 MET | Overall accuracy was 60% > 50% Target |
 | 2 | No single label accounts for more than 60% of the total dataset. | 3/3 | 3/3 MET | All 3 seeds, highest label is 18/30 = 60% in the test split |
 | 3 | When another human or AI model labels against the 20 cold labeled posts, atleast 80% should be in agreement. | 3/3 | 3/3 MET | This one test is same for all 3 runs (seed independent) and just met the threshold at 80% |
 | 4 | The accuracy of the most confident third should atleast be 85%. | 3/3 | 0/3 MISSED | Accuracy were below 85% on all 3 runs, although close to 85%. |
@@ -570,21 +570,18 @@ Criteria 3: I had a friend label the cold posts based on my label definitions an
 **1.**
 > *The post:*
 > Watching the last 400 of that and I had to stand up. Still standing up actually.
+
 > *Staff said / I said:*
 > Staff said reaction, I said nothing (I accidentially forgot to label this one)
+
 > *My call, and why:*
 > I would have labelled this reaction too.
+
 > *Which pile:*
 > Maybe Pile (a)?
 
 **2.**
-> *The post:*
-> N/A
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
+N/A
 
 **What the pattern in my disagreements tells me:**
 
@@ -595,8 +592,11 @@ I should not have a labelling issue since my agreement rate is 97% with the 1/30
 ## The Improvement
 
 **What I changed:**
+
 I added 30 more posts for `trade_log` label.
+
 **Which diagnosis pointed at it:**
+
 Criteria 5: too few examples for a label.
 
 ### Run Log — After
