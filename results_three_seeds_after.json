@@ -1,0 +1,209 @@
+[
+  {
+    "seed": 42,
+    "n_test": 35,
+    "accuracy": 0.5142857142857142,
+    "f1_macro": 0.16981132075471697,
+    "per_label": {
+      "educational": {
+        "precision": 0.5142857142857142,
+        "recall": 1.0,
+        "f1": 0.6792452830188679,
+        "support": 18
+      },
+      "trade_log": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9
+      },
+      "market_opinion": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "platform": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      }
+    },
+    "confusion": {
+      "educational": {
+        "educational": 18,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      },
+      "trade_log": {
+        "educational": 9,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      },
+      "market_opinion": {
+        "educational": 4,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      },
+      "platform": {
+        "educational": 4,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.5161468386650085,
+      "mean_when_wrong": 0.487013041973114,
+      "accuracy_most_confident_third": 0.8181818181818182,
+      "accuracy_least_confident_third": 0.2727272727272727,
+      "n_per_third": 11
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  },
+  {
+    "seed": 7,
+    "n_test": 35,
+    "accuracy": 0.5142857142857142,
+    "f1_macro": 0.16981132075471697,
+    "per_label": {
+      "educational": {
+        "precision": 0.5142857142857142,
+        "recall": 1.0,
+        "f1": 0.6792452830188679,
+        "support": 18
+      },
+      "trade_log": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9
+      },
+      "market_opinion": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "platform": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      }
+    },
+    "confusion": {
+      "educational": {
+        "educational": 18,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      },
+      "trade_log": {
+        "educational": 9,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      },
+      "market_opinion": {
+        "educational": 4,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      },
+      "platform": {
+        "educational": 4,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.4833872616291046,
+      "mean_when_wrong": 0.4607015550136566,
+      "accuracy_most_confident_third": 0.8181818181818182,
+      "accuracy_least_confident_third": 0.2727272727272727,
+      "n_per_third": 11
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  },
+  {
+    "seed": 2024,
+    "n_test": 35,
+    "accuracy": 0.5142857142857142,
+    "f1_macro": 0.16981132075471697,
+    "per_label": {
+      "educational": {
+        "precision": 0.5142857142857142,
+        "recall": 1.0,
+        "f1": 0.6792452830188679,
+        "support": 18
+      },
+      "trade_log": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9
+      },
+      "market_opinion": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "platform": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      }
+    },
+    "confusion": {
+      "educational": {
+        "educational": 18,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      },
+      "trade_log": {
+        "educational": 9,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      },
+      "market_opinion": {
+        "educational": 4,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      },
+      "platform": {
+        "educational": 4,
+        "trade_log": 0,
+        "market_opinion": 0,
+        "platform": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.47380557656288147,
+      "mean_when_wrong": 0.4470745921134949,
+      "accuracy_most_confident_third": 0.8181818181818182,
+      "accuracy_least_confident_third": 0.18181818181818182,
+      "n_per_third": 11
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  }
+]

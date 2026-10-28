@@ -1,34 +1,162 @@
 text,label,note
-"Updated strategy - wheeling SPY
-Thanks for the tremendous feedback on my other post: Please critique my ""boring"" portfolio : r/options
+"Racking up 100% trading options day after day adds up to big money
+r/options - Racking up 100% trading options day after day adds up to big money
+(Click on the chart panel for an expanded view.)
 
-I've made some tweaks, but still have some lingering questions.
+Like I’ve often said with the #SimpleOptionsDayTrade all you need is $QQQ and/or $SPY. Both have racked the 100% profit targets again today (see the yellow and white flags on the charts' right axis) for dollars gained), $1,000 plus for each $1K day trade.
 
----------------------------------------------------------------------
+THE ENTRY SIGNAL
 
-Capital: ~$50k cash + $25K margin
+If the SPY calls or QQQ calls or a STOCK calld are above the open, BUY THE CALLS. If the SPY puts or QQQ puts or a STOCK puts are above the open, BUY THE PUTS.
 
-Step 1: Sell slightly OTM 0dte CSP
+THE PROFIT TARGET
 
-Step 1A: expry worthless, repeat step 1
+At least, a 100% gain for the day.
 
-Step 1B: expry ITM, roll to earliest OTM put for credit, wait for expry and go to 1A/1B as appropriate
+THE SELL SIGNAL
 
-Step 2: if assigned, sell slightly OTM 0dte CC
+If buying other than 0DTE options, never hold overnight. It is a day trade no matter what.",trade_log,extra_data
+"My 0DTE Options Strategy
 
-Step 2A: expry worthless, repeat step 2
+Gold Digger's 0DTE Options Strategy
 
-Step 2B: expry ITM, if above cost basis, accept assignment; if below cost basis, roll to earliest OTM call for credit
+If you start with $1,000 and make 3% per day, after 252 trading days the account reaches roughly $1.72 million. The math is straightforward. Staying solvent long enough to let it work is the hard part.
 
-This has produced approximately 25% for the past 2 years. It's very low effort; I spend less than 2 minutes each day. It doesn't work every day, but even when SPY goes down and I roll a few days out, I don't even check it again until date of expry.
+I’ve traded options long enough to know the gap between chasing home runs and actually staying in the game. For years I was a consistent loser because I kept trying to turn every trade into a big winner. I’d watch green positions reverse into red ones while I waited for “just a little more.” That single habit cost me far more than any bad entry ever did.
 
-Question(s):
+The shift happened when I stopped fighting for maximum gains on every trade and started protecting the green I already had. Here’s the process that changed the results:
 
-Q1: I used to park the cash in long SPY, but others have said that I have single sided risk. So now the money to secure is sitting in cash. Plus I get additional purchasing power.
+I set a take-profit target around 20% and sell roughly 75% of the position once it hits. That locks in a base profit and removes most of the risk. The remaining 25% becomes the runner. On those runners I immediately move the stop to break-even (or slightly above) and trail it higher as the trade works. Many of those runners finish in the 50–75% range, some push into triple digits, and the bulk of the portfolio still produces a steady stream of 15–20% winners.
 
-Do I have another option to generate slightly more interest on the $50k cash?",educational,pre-labelled
-"GME again
-i gotta find Ryan Cohen's phone number so i can ask for a loan to buy calls. he is still messing with my head, buying more shares with his millions $$$$. pumping his lively hood.",market_opinion,pre-labelled
+It is not exciting, and it is not supposed to be. The real goal is simple: no red days. Even if I place five trades and the day finishes up only $5, that is a successful day. I did not dig a hole I have to climb out of tomorrow. Small, consistent greens compound. Losses force recovery mode, which usually leads to bigger risks and worse decisions.
+
+A few rules keep the system intact:
+
+Initial stop is never wider than 25–30%. Anything looser turns a normal pullback into a meaningful loss.
+
+The 20% take-profit level is deliberate. Most trades worth taking will reach it. Push the target to 25% or higher and the win rate drops while the size of the losers stays roughly the same.
+
+Once the first 75% is off, the remaining piece has a defined risk of zero (or close to it). That changes the psychology. You are no longer protecting capital on that slice; you are only managing a free ride.
+
+I usually split the runners into two more pieces. One is about 15%, which I sell around 50% (or whatever level makes sense given how fast the market is moving). The final 10% I often let run for the rest of the session with little active management—just price-target alerts so I know when meaningful action is happening.
+
+On runners I try to exit into an IV bar—a large candle that carries a surge of implied volatility and pushes option prices sharply higher. I do this by lifting the profit target out of the way and dragging the stop up from below, often sitting it roughly $0.10 under the high of that candle, and trailing that stop right up. If the trade dumps, I exit near the best price. If it continues higher at a slower pace, I’ve still usually captured the bulk of the move. Grabbing every last penny does not matter. Being green does. I never go back and look at what could have been—only at what was.
+
+The entire framework rests on one idea: stay green, stay small, and let the math work. Greed tries to turn every trade into a home run. This approach treats most trades as base hits and only occasionally lets a runner become something larger. Over a full year of trading days, the difference between those two mindsets is the difference between compounding and blowing up the account.
+
+When I call out a trade, I consider it successful if it hits the 20% target. Everything after that is bonus.
+
+",trade_log,corrected
+"Anyone else trade SPX broken-wing butterflies? Here’s the structure I use
+I mostly trade income trades on SPX because it removes a few headaches (I moved out from SPY): it’s cash-settled, so there’s no early assignment surprises.
+
+The structure I use, which is called SPX Best (by myoptionsedge), combines a broken wing butterfly with a vertical spread. The butterfly (with one wing wider than the other) has, by definition, defined risk and positive theta, so it earns as time passes while the SPX stays inside the structure (the negative of this strcuture is that it is Vega negative - this is an issue when there are corrections/IV increases). The uneven wings deliver a credit at open. It is positioned that to the upside has no risk and has a maximum loss you can see before you enter it.
+
+Adding a vertical (a short call spread) placed above the SPX price as a “soft hedge”, brings in a little extra credit and adds some negative delta to offset the butterfly’s directional lean (+Delta), with its own risk still capped. The trade-off is that you give up big upside in exchange for predictability. The trade adjustments are flexible enough to manage Delta risk along the trade life. This trade uses longer dated expirations at open (70-80DTE). This gives you slower decay but more room to adjust and return consistency.
+
+Does anyone have experience trading broken wing butterflies?
+
+Which underlyings do you use? (I did not trade this in RUT but does anyone have experience trading RUT butterflies?)",educational,pre-labelled
+"Anybody trading MRNA? Sold today 270 call in Nov for 11.7
+This is relatively aggressive and on large side position for my account. I still like it how the stock had a nice run, it's part of nasdaq and the index being mean reverted, and it has annualized return on capital (estimated) that I call ridiculous territory.
+
+Everything else checks out as well, IV rank and IV are high, realized is lagging. Delta could be smaller but okey whatever agent picked with all the data it had. Liquidity is average, but still filled pretty fast.
+
+I think it has the most expensive options right now, even more expensive than AI stocks.
+
+Anybody else trading MRNA? Any advise what to expect or how to handle it beyond standard thresholds?",educational,cold
+"It All Comes Down to This
+
+I have built up a nice little nest egg of 40k and tomorrow I intend on throwing 50% of it at spy options tomorrow. I understand the risk and accept it. Here is the twist. I am conducting an experiment to see if the community can accurately call a coin flip twice in a row. I’m going to let you all call the shot for day one of two. Calls or puts?
+
+UPDATE: thank you all for your decision, you just made me 19400 in 30 mins. I love you all.",trade_log,pre-labelled
+"Fed Call arising due to expiring ITM option processed over weekend
+A long ended up ITM that I expected to expire OTM. It was valued at 0.01 so obviously it didn't get bought. Unfortunately between market close and processing, it ended up very slightly ITM.
+
+This caused my account to be short ~$1K.
+
+Normally FINRA 4210(b)(4)/05 allows you to immediately sell said security as a remedy/exemption. But seeing how it processed over the weekend, would you be allowed a similar exemption at market open?",educational,pre-labelled
+"50 Trades in - A Reflection
+r/options - 50 Trades in - A Reflection
+Like many new options traders, I initially thought day trading was the route I should take. A good friend of mine who's an ex-Fidelity guy (and has done very well since) suggested I replace basically everything I was thinking about day trading, including the term itself, with options.
+
+I'm pretty risk averse and don't have deep pockets, so I worked with my friend to develop an approach designed to mitigate as much risk as reasonably possible. I did a bunch of research ahead of time and paper traded throughout January 2026 before finally pulling the trigger in February.
+
+For what it's worth, this has been my system so far:
+
+Highly liquid ETFs - primarily SPY and QQQ
+
+$10-wide put credit spreads
+
+Originally 30+ DTE
+
+One contract per trade for at least my first 30 trades, then gradually increased position size as buying power/experience grew
+
+Generally ≤ .25 delta at entry
+
+Close at or above 60% premium realized
+
+More recently, I've tightened that into 40+ DTE, ≤ .20 delta and usually 3 or 5 contracts per position. I've also added an early harvest rule: if a new 40+ DTE position reaches 30%+ profit within its first five trading days, I'll take the profit rather than waiting weeks for theta to accelerate. Then I'll redeploy the buying power if another qualifying setup is available.
+
+You can see in the spreadsheet (you may have to zoom - apologies) where I deviated from the system and experimented with debit spreads, iron condors and butterflies. I had some wins and some losses there before ultimately returning to the boring, disciplined approach.
+
+Full disclosure: I recognize that a generally flat-to-up market (since February) has been favorable to the strategy, even though we've had some pretty substantial bouts of volatility along the way.
+
+Bottom line: so far it's fitting my personality fairly well. I'm mostly posting because I've learned quite a bit from lurking here and figured I'd share what's been working for me so far.",trade_log,extra_data
+"Options Extended Hours - October 19th
+TradeStation and MooMoo have announced options extended hours will be available on their platforms starting Monday, October 19th.
+
+ETF’s: SPY, QQQ, IWM, GLD, XLF
+
+Equities: NVDA, TSLA, AAPL, MU, INTC, META, AMZN, AMD, MSFT, GOOGL, PLTR, ORCL, AVGO, NFLX, HOOD, GOOG, SNDK, BAC, MRVL, BABA, TSM, NOK, F, PFE
+
+PreMarket: 7:30-9:25am ET
+
+AfterHours: 4:00-4:15pm ET
+
+Anyone receive emails from other brokers announcing they will be offering extended hours for options?",platform,corrected
+"Some take aways on premium selling after 4 mo. Imagined with reality
+The context:
+
+cash secured account low six fig, 90% are short options both sides, few cc positions.
+Each position just one lot. Number of positions fluctuates 1-2 dozen. Vanilla premium selling, no strategies, analysis. Not using any spreads, poor mans cc, indexes, stops, LEAPS. No discretionary strikes selections, PnLs thresholds or timing to close.
+Returns on risk adjusted basis are nice and steady.
+
+(Let me know if I can clarify anything else for context)
+
+This is what I imagined compared to how it's working in reality. These observations from running portfolio for ~4 last months.
+
+I imagined it will be some steady paced position placement and then taking off winners
+
+Reality: it's wait, wait and wait more patiently. Then volatility gets flushed, and suddenly a bunch winners show up in PnL table.
+
+2. I imagined position will have some PnL relation to the market moves.
+
+Nope, on large up days portfolio daily PnL may be all red due to vol expansion, on non eventful days may have all but one positions green.
+
+3. I imagined positions will have steady burning theta and becoming greener when moving towards DTE threshold. Not even close. Almost all time portfolio has negative opened PnL ""balance"" - that freaked me out first. And most of gains come with vol collapse, like after earnings events, or some funds stopped chasing names.
+
+4. I imagined balancing portfolio delta will be a thing but it doesn't seem have much importance. Delta moves around pretty substantially. All portfolio balancing comes from random picks of liquid names so one sided moves don't happen, at least not often.
+
+5. I imagined opening and closing is a non event. Pun in order, click send.
+
+In reality, I have 2-5 trade ideas generated and sometime put them to work after days, and sometimes they take 1-2 days to fill at limit price (most do get filled within minutes or hours). Closing is even more challenging! Routinely take days to close winners at the threshold.
+
+6. I also imagined selling premium is not complicated at it core.
+But in reality it requires thinking about capital allocation and usage level, new positions fit, value ranks. Like chess.
+
+7 I thought there were plenty of names to sell premium.
+
+Discovered there are not so many truly liquid names, with good IV and positioning. I recycle some names for selling puts, but it's a challenge to find sellable liquid premium.
+
+8. I thought low six fig is enough to diversify and trade plenty of names.
+In reality I realized buying power is the most precious and very scarce. A few clicks and buying power drops to 20% suddenly
+
+Any similar experiences? Are any of this real or just the imagination?
+
+Example of a typical trade in the portfolio.",educational,pre-labelled
+"OPTION TRADING ON BINANCE
+Please i would like to know if its possible to trade stock options on Binance",platform,corrected
 "10 calls into earnings. Either genius tomorrow or “deleted” by Friday.
 
 r/options - 10 calls into earnings. Either genius tomorrow or “deleted” by Friday.
@@ -58,21 +186,10 @@ One thing I did notice is the massive open interest increase on the put side abo
 Is there anything to be learned from data like this? The market made some massive moves going into the end of the week. It was a big expiration week and there were some big news events that influenced the moves.
 
 For the record, I don't trade options. I trade futures. I use open interest to set and trade off levels.",educational,pre-labelled
-"Anyone else trade SPX broken-wing butterflies? Here’s the structure I use
-I mostly trade income trades on SPX because it removes a few headaches (I moved out from SPY): it’s cash-settled, so there’s no early assignment surprises.
-
-The structure I use, which is called SPX Best (by myoptionsedge), combines a broken wing butterfly with a vertical spread. The butterfly (with one wing wider than the other) has, by definition, defined risk and positive theta, so it earns as time passes while the SPX stays inside the structure (the negative of this strcuture is that it is Vega negative - this is an issue when there are corrections/IV increases). The uneven wings deliver a credit at open. It is positioned that to the upside has no risk and has a maximum loss you can see before you enter it.
-
-Adding a vertical (a short call spread) placed above the SPX price as a “soft hedge”, brings in a little extra credit and adds some negative delta to offset the butterfly’s directional lean (+Delta), with its own risk still capped. The trade-off is that you give up big upside in exchange for predictability. The trade adjustments are flexible enough to manage Delta risk along the trade life. This trade uses longer dated expirations at open (70-80DTE). This gives you slower decay but more room to adjust and return consistency.
-
-Does anyone have experience trading broken wing butterflies?
-
-Which underlyings do you use? (I did not trade this in RUT but does anyone have experience trading RUT butterflies?)",educational,pre-labelled
-"Front Month IV problems in double calendars
-I’m currently running a double calendar which I opened on Monday of this week, my shorts expire this Friday and my longs expire the next Friday. Price in the underlying has barely moved, IV has inflated proportionately on both my longs and my shorts and the value of the calendar has not moved an inch. When I traded single calendars, the theta decay would most definitely have kicked in especially when price revisits but that’s not happening here. For those of you who trade calendars, how would you recommend I fix this problem? I can provide details as necessary but this is a general overview!",educational,pre-labelled
-"Crash protection got more expensive on Friday during the rally
-r/options - Crash protection got more expensive on Friday during the rally
-The only volatility gauge that was up on Friday is one that measures crash risk. The SKEW index, which tracks what traders are paying for protection against a large, sudden drop, rose 5%. That is the 95th percentile of its past year. On the same day, the VIX fell 11.21% and the VVIX, which measures the volatility of the VIX itself, fell 11.09%. options traders used Friday’s calm to buy put insurance ahead of Wednesday’s Fed decision.",market_opinion,pre-labelled
+"Will most retail options trading be automated in 5 years?
+I still open most of my spreads by hand but I've started letting alerts handle exits and rolls. Brokers keep making it easier to hand off the boring parts. Feels like in a few years a lot of retail flow will just be rules running on their own. Anyone here already fully automated on options, or is it still mostly clicking buttons? What part would you never hand off?",market_opinion,cold
+"Credit Spreads Risk
+Im having trouble understanding the risk on a bull put spread. I though they were defined hard capped risk. Because for example I sell a 170 put and buy a 165 put. On wealthsimple which im using it requires a margin account. I thought risk was defined. What if price is trading at 167 and i get assigned and my long put is not in the money. Everything expires and Im left 17K in debt. Is this possible or am I missing something?",educational,pre-labelled
 "Long dated vertical call spreads
 What are some downsides to buying a long dated call spreads on a single name or ETF after a major pullback?
 
@@ -81,63 +198,18 @@ For example if I buy a call spread on a single name with a $100 spread, my break
 If I am right, I make roughly 60% in a year, and if wrong I am holding an extremely beaten down stock. I could potentially also close out the short in that scenario and keep the long open for more risk.
 
 Liquidity isnt great, and I will lose something on the buy and sell. Theta isnt great, and the delta is like 30. So a large move up in the short term will not result in a large gain immediately.",educational,pre-labelled
-"Days To Expiration
-In options trading there are a lot of variables that are out of your control. So I say “control the controllables”. Days To Expiration (DTE) is controllable upon trade entry. Time is a constant. You can count on the sun rising tomorrow. You can count on 10 DTE today being 9 DTE tomorrow. It is certain, and there are few certainties in this business. You may remember the Rolling Stones song “Time is On My Side“, well, when you are selling OTM (Out of The Money) Puts that is definitely the case. Sometimes, we all may wish that time would slow down in our personal lives, but in our trading lives the passage of time benefits us daily through Theta decay. Theta decay accelerates as expiration approaches. When you sell a Put Credit Spread at 28-32 DTE, you capture the steepest part of the Theta decay curve. Each day that passes erodes the value of the options you sold, putting money in your pocket without the underlying needing to move in your favor.
+"ITM assignment problem
+On IBKR, I was short the STX Jul '31 call spread 840 - 915 in the beginning of the week, and then momo rallied it on 880+ on thursday open. I hedged partially +25 shares and held it. On Friday (expiration day) it bumped higher to 900-910 and I wanted to hold it, so I hedged further by moving the lower strike to 860 for 13.75 debit. Up to this point I thought everything was cool and I was ready for the weekend, but then I got a margin call about 11:36 ET. Not knowing what would happen if I got assigned because this would have taken 67k margin. I decided in panic to close the short wing at 15:20 which was at 16.25 debit and sold the hedge with profit, overall I lost about 1k (the initial credit spread was an iron condor). However if I held for 1 more hour, I would have realized 1.6-1.8k profit.
 
-What DTE are you guys typically trading?",educational,pre-labelled
-"Option selling
-When your all selling options are you selling even if the stock is below its 200 sma?
+Lesson learned to not hold so tightly on borrowed margin :)",trade_log,extra_data
+"Early retirement has me rethinking options trading
+I'm 43. I Inherited wealth and retired in my thirties. I Learned options for mental stimulation, built my own method, done well
 
-I find it beaten up stocks are good to sell but then again stocks like Adobe keep getting beat",educational,pre-labelled
-"Are there any brokers that dont auto-sell options before close?
-If you don't have the liquidity if your options were to exercise ITM. Robinhood closes your positions automatically 30 minutes before close. Chase closes your positions an hour before close. Any brokers that dont do this?",platform,corrected
-"Shorting Volatility
-Could I get a consensus on some credit condors for earnings on big companies like NKE that shouldn't have a ton of price movement? Is there a risk piece that im missing other than large PA?",educational,pre-labelled
-"NVDA — right play, wrong expiration 🤦‍♀️
+Losing my wife two years ago changed my outlook on time. Financially secure, so profit is no longer the point. I love the mental work of options, but wonder if I want lifelong daily market monitoring
 
-r/options - NVDA — right play, wrong expiration 🤦‍♀️
-Page 1 (Current page)
-Page 2
+For those who've traded options for years, what made you stick with it, scale back, or walk away? Did you move toward more conservative strategies or focus on other parts of life?
 
-
-Item 1 of 2
-Bought 25 NVDA $225C 9/30 at $2.88, about $7.2k total.
-
-The play is a short-term sympathy run into MU earnings next week. My thinking is that if MU gets a pre-earnings run and semis stay strong, NVDA could catch some of that momentum.
-
-I picked the $225 strike because NVDA was trading around $225, so I wanted basically ATM calls rather than going far OTM.
-
-The dumb part: I bought 9/30 by mistake. I actually wanted more time because I don’t want theta eating me alive while waiting for the setup.
-
-Plan is to see what NVDA does Monday. If I get the move I’m looking for, I’ll close these and move into the expiration I originally wanted. If the setup breaks, I’m not planning to sit around praying until expiration.
-Until then, part of my risk management is basically hoping Trump stays the fuck away from social media this weekend.",trade_log,cold
-"Let AI agents deploy options bots on paper desks. Worst one: long puts on TSLA/AMD/META/NFLX, 53 tra
-I let AI agents deploy options bots on paper desks and read the ledger today. Here's the honest table, no cropping.
-
-The worst agent-built bot buys puts on TSLA, AMD, META and NFLX. 53 trades, −$145,438. It's paused now. That took a pause call in the ledger, the AI never did it on its own.
-
-Second worst buys calls on AVGO, MU and SMH. 69 trades, −$140,504. Also paused. Third buys puts on NFLX, META, GOOG. 61 trades, −$66,658, still running.
-
-Across the whole lot: 781 bots deployed by agents, 18,845 closed trades, 8,992 winners, −$1,335,857 of paper money. 773 of the 781 went out without a backtest, because the backtest tool is optional and an optional tool gets skipped.
-
-The best one is also a premium buyer, calls on SPY/AAPL/NVDA/TSLA, +$24,392 on 8 trades. I'm not drawing a conclusion from 8 trades and neither should you.
-
-The thing I'd actually argue for isn't the strategy, it's the leash. A key opens one desk and nothing else. It carries a scope: read, backtest, deploy. And there's a kill switch that freezes every agent on the account; the agent can see it's frozen but there's no tool to unfreeze, only a signed-in human can. So the AI can never let itself back in.
-
-I built this. Paper money only, there's no broker anywhere in it. If you want a specific bot's fill list I can pull it.",trade_log,pre-labelled
-"It All Comes Down to This
-
-I have built up a nice little nest egg of 40k and tomorrow I intend on throwing 50% of it at spy options tomorrow. I understand the risk and accept it. Here is the twist. I am conducting an experiment to see if the community can accurately call a coin flip twice in a row. I’m going to let you all call the shot for day one of two. Calls or puts?
-
-UPDATE: thank you all for your decision, you just made me 19400 in 30 mins. I love you all.",trade_log,pre-labelled
-"Fed Call arising due to expiring ITM option processed over weekend
-A long ended up ITM that I expected to expire OTM. It was valued at 0.01 so obviously it didn't get bought. Unfortunately between market close and processing, it ended up very slightly ITM.
-
-This caused my account to be short ~$1K.
-
-Normally FINRA 4210(b)(4)/05 allows you to immediately sell said security as a remedy/exemption. But seeing how it processed over the weekend, would you be allowed a similar exemption at market open?",educational,pre-labelled
-"Tyson Foods
-The President says he’ll be allowing ranchers and farmers to process and sell their own product on the open market. Tyson controls about 85% of the meat processing industry and this could cost them billions. Puts? Or is there an underlying reason why this wouldn’t affect Tyson?",market_opinion,pre-labelled
+I'd appreciate hearing about your experiences!",educational,pre-labelled
 "Tested the 'big squeeze before takeoff' idea: 516 symbols, 5 years. Tight ranges predict more quiet
 Everyone has heard the folk model: when a name goes dead quiet and the range compresses, it is coiling before a big move. We wanted to know if the tightest compressions actually launch, so we tested it.
 
@@ -164,84 +236,16 @@ Before you flip it and buy options on the loud names: implied vol already knows.
 What actually preceded launches in our record was not shape, it was flow - repeated large premium hitting the same name across days, and catalysts. Breakout systems that use compression only as a shortlist and trigger on the actual break are a different claim than ""tight = about to launch at a fixed horizon"" - we only tested the latter.
 
 Happy to share methodology details. Poke holes.",educational,pre-labelled
-"Placing more than 390 option trades in a day
-What brokerage allows it? Did any of you exceed that number and not get notified? Or which brokerages flagged you? Thank you for any input.
+"Margin requirements for selling premium right now are a joke
+Trying to run 45 dte credit spreads on spx lately and the buying power reduction is just absurd for the pennies we are collecting in this low VIX environment.
 
-Edit: is this place dominated by bots? I asked for concrete names and instances and all I got are LLM type of definitions and vague responses. Wtf?",educational,pre-labelled
-"Weekly PMCC Strategy
-Greetings
+My broker wants to lock up $1k in margin just to collect like $60 on a 10-wide spread. The math ain't mathing if you have a smaller account. the capital inefficiency of selling options right now is literally forcing retail into degenerate 0dte lotto tickets just to see any ROI
 
-I’ve been playing around with an idea that really seems too good to be true so I’m sure it has to be lol. I’d love to hear thoughts about what I’m missing here.
+I kinda gave up on my main cash account and just grabbed a FundedFast eval yesterday mostly just to have raw buying power without holding my own liquidity hostage for weeks while theta does its thing
 
-My assumption is that in the long term I’m bullish on equities and precious metals. Of course the market is unstable and anything could happen, however there are only a few times that the Nasdaq has been negative for more than a one year period. Of course there was the dot com crash however I do think that there has been a fundamental shift in our economy making a repeat of that unlikely.
-
-So this is what I’m considering. Layering (monthly) 0.7 Delta LEAPS on the QQQ, and GLD as far out as possible (>800 days) then selling weekly ATM or 1 strike OTM calls against them.
-
-1 DTE if the underlying has risen ITM close the entire spread and establish. This way I do not have assignment risk. If the underlying drops resell a new ATM call but always staying above my cost basis.
-
-Looking at an example as I write this the QQQ 15Dec28 685 is at a 155 mid. The 10Sep2026 719 (ATM) is 5.34.
-
-If the QQQ is flat to up that extrinsic arbratage is about 3.2% a week. Since my leap is a higher delta I’m in no jeopardy if the QQQ rises, I’ll only make money. If the QQQ drops I’ll harvest the extensic and be able to sell a strike as low as 714 next week due to my lowered cost basis make the same 3% and wash and repeat. This annualized out to be 156% a year at 3% a week.
-
-Now if the market is in a sustained downturn soon after establishing my position I might not be able to keep selling calls under my basis and I’ll have to wait for a recovery. The worst case would be of course there not being a recovery for multiple years, but I do hold a long term bullish bias.
-
-In a great case in 30 successful calls I’d have a risk free leap that even in an extended downturn could sell calls against.
-
-How would you compare this idea to the standard PMCC selling .3 delta calls and closing/rolling for a loss when needed. What am I missing as there has to be something.
-
-Thanks all",educational,cold
-"Help understand calls on 2-3x leverage stocks
-As the title says, I’m looking for info on trading options on tickers such as RKLX or IONX. Rocketlab 2x and IonQ 2x. It seems like there is crazy reward for minimal risk but I must be missing something?
-
-Has anyone done trades with leveraged stocks or etfs and had success? or even horror stories?
-
-Thank you",educational,cold
-"LWLG 5X account by Jan 2029
-BLUF: LWLG debit spread 7c/10c Jan 2029 easiest 5x you’ve ever seen.
-
-You may or may not have heard of LWLG, but you have heard of data transfer. What’s the bottleneck? Converting data into light.
-LWLG is the solution.
-The 400G and beyond switch that all the AI and data centers are salivating for.
-It’s pre-revenue but it’s the best solution available (if data centers embrace the technology).
-Anyway, would you like to 5x your position?
-7c/10c Jan 2029 debit spread cost .50
-$250 profit per $50 if the stock hits $10. (5X)
-Stock just went up about 12% in the past week. (4.94-5.79)
-Stock hit $18.71 in May of 2026 (only 5 months ago)
-
-TLDR: if the stock even hits within 54% of what it was 5 MONTHS AGO between now and January 2029 (over 2 years away) you will 5X the position. The risk/reward is crazy.",market_opinion,pre-labelled
-"Hey everyone,Like many of you heading into earnings season, I kept running into options calculator
-Hey everyone,
-
-Like many of you heading into earnings season, I kept running into options calculators that were either paywalled, bloated with ads, or didn't properly show post-earnings IV crush.
-
-I spent the weekend building a clean, lightweight web app: **OptionsStrat Pro**.
-
-🔗 Live Tool: https://vhomesai.github.io/options-strat-pro/
-
-Key features I built into it:
-
-• 1-Click Strategy Presets (Long Strangles, Straddles, Iron Condors, Covered Calls, Debit Spreads)
-
-• Dynamic Post-Earnings IV Crush Simulator (see exactly how much extrinsic value deflates if volatility drops 30-50%)
-
-• Expected Move & Overnight P&L Scenario Matrix
-
-• Real-time Black-Scholes Greeks (Delta, Gamma, Theta decay, Vega)
-
-• Client-side only (0 tracking, 0 ads, runs instantly in the browser)
-
-It's completely free. Would love your honest feedback on what features or presets I should add next!",platform,corrected
-"Anybody trading MRNA? Sold today 270 call in Nov for 11.7
-This is relatively aggressive and on large side position for my account. I still like it how the stock had a nice run, it's part of nasdaq and the index being mean reverted, and it has annualized return on capital (estimated) that I call ridiculous territory.
-
-Everything else checks out as well, IV rank and IV are high, realized is lagging. Delta could be smaller but okey whatever agent picked with all the data it had. Liquidity is average, but still filled pretty fast.
-
-I think it has the most expensive options right now, even more expensive than AI stocks.
-
-Anybody else trading MRNA? Any advise what to expect or how to handle it beyond standard thresholds?",educational,cold
-"Credit Spreads Risk
-Im having trouble understanding the risk on a bull put spread. I though they were defined hard capped risk. Because for example I sell a 170 put and buy a 165 put. On wealthsimple which im using it requires a margin account. I thought risk was defined. What if price is trading at 167 and i get assigned and my long put is not in the money. Everything expires and Im left 17K in debt. Is this possible or am I missing something?",educational,pre-labelled
+But seriously, how are you guys trading delta neutral right now? iron condors on qqq are paying absolutely nothing. Thinking of just pivoting to calendar spreads or long diagonals until iv actually pops again. What tickers are you actually getting decent premium on this week without risking blown up tail risk?",market_opinion,pre-labelled
+"Shorting Volatility
+Could I get a consensus on some credit condors for earnings on big companies like NKE that shouldn't have a ton of price movement? Is there a risk piece that im missing other than large PA?",educational,pre-labelled
 "ADD + TICK + OBV: a 3-gauge scalping check
 [Video of trade rules]
 I made this short animation to explain a simple filter for 1-minute and 5-minute scalps. The idea is that you only trade when three gauges agree, and each gauge has one job.
@@ -270,27 +274,132 @@ Caveats
 The ±500 and ±1,000 levels are common rules of thumb, not magic numbers. Test them against your own charts first. In a strong trend, a divergence can go nowhere for a long time. That’s why the exit rules matter more than the entry. The charts in the video are illustrations, not a real trading session. Nothing here is financial advice.
 
 Question: for anyone who scalps with breadth, do you use $ADD as a hard filter like this, or more as background context? I’m curious whether people find the 5-min/1-min split too slow or too fast.",educational,pre-labelled
-"Which brokerage is good for international traders and has a dependable API for third party devs?
-We are looking to add support for another brokerage to the Optionsmith trading platform because we currently support Schwab accounts only -- and have many folks who want to use the platform but they are in countries where Schwab isn't available. If you are a trader in one of these countries, which brokerage is preferred?
+"Updated strategy - wheeling SPY
+Thanks for the tremendous feedback on my other post: Please critique my ""boring"" portfolio : r/options
 
-Note: IBKR's API is not viable for this.",platform,corrected
-"Why can E*TRADE fill my 2-leg covered-call rolls at prices where IBKR, Schwab, TradeStation cannot?
-I have been doing side-by-side testing of 1-contract covered-call rolls at several brokers.
+I've made some tweaks, but still have some lingering questions.
 
-The options were approximately 30 DTE. I submitted essentially identical 2-leg complex limit orders at approximately the same time and adjusted the net price in $0.01 increments.
+---------------------------------------------------------------------
 
-In repeated tests, E*TRADE was able to fill these rolls at net prices where the same orders at IBKR, Schwab and TradeStation remained unfilled. The difference was repeatable enough that it did not appear to be just a single lucky fill.
+Capital: ~$50k cash + $25K margin
 
-I am specifically talking about native 2-leg complex orders (buy-to-close the existing call and sell-to-open the new call), not manually legging into the position.
+Step 1: Sell slightly OTM 0dte CSP
 
-Has anyone else done similar side-by-side testing of covered-call roll execution across brokers and observed a consistent difference? If so, which brokers have given you execution comparable to E*TRADE for small complex orders?",platform,corrected
+Step 1A: expry worthless, repeat step 1
+
+Step 1B: expry ITM, roll to earliest OTM put for credit, wait for expry and go to 1A/1B as appropriate
+
+Step 2: if assigned, sell slightly OTM 0dte CC
+
+Step 2A: expry worthless, repeat step 2
+
+Step 2B: expry ITM, if above cost basis, accept assignment; if below cost basis, roll to earliest OTM call for credit
+
+This has produced approximately 25% for the past 2 years. It's very low effort; I spend less than 2 minutes each day. It doesn't work every day, but even when SPY goes down and I roll a few days out, I don't even check it again until date of expry.
+
+Question(s):
+
+Q1: I used to park the cash in long SPY, but others have said that I have single sided risk. So now the money to secure is sitting in cash. Plus I get additional purchasing power.
+
+Do I have another option to generate slightly more interest on the $50k cash?",educational,pre-labelled
+"Is Applovin a complete bargain right now ??
+Been watching this stock all year, fundamentals are beyond robust, constantly beats earnings, growth off the charts, analysts have average price target around $510 and the stock is trading at $310, from all time highs of over $700. Been loading up on Leaps which are cheap just now due to low IV. Anyone else doing the same ?",market_opinion,pre-labelled
+"Days To Expiration
+In options trading there are a lot of variables that are out of your control. So I say “control the controllables”. Days To Expiration (DTE) is controllable upon trade entry. Time is a constant. You can count on the sun rising tomorrow. You can count on 10 DTE today being 9 DTE tomorrow. It is certain, and there are few certainties in this business. You may remember the Rolling Stones song “Time is On My Side“, well, when you are selling OTM (Out of The Money) Puts that is definitely the case. Sometimes, we all may wish that time would slow down in our personal lives, but in our trading lives the passage of time benefits us daily through Theta decay. Theta decay accelerates as expiration approaches. When you sell a Put Credit Spread at 28-32 DTE, you capture the steepest part of the Theta decay curve. Each day that passes erodes the value of the options you sold, putting money in your pocket without the underlying needing to move in your favor.
+
+What DTE are you guys typically trading?",educational,pre-labelled
+"Execute time
+So this morning during market open I used Robinhood for a call about 10 minutes before market opened and when market opened my stock price rose drastically but the call was still saying pending.., which prevented me from any getting gains can anyone tell me what the issue here was and if any other apps have faster fulfillment time? I’m am extremely pissed rn because I should be in extreme take profit rn and is this a common issue?",platform,corrected
+"Only 30 Minutes Into Cash Session and Taking the $970 Profit (8/25)
+The previous post was not quite understandable for some readers. Therefore a quick note before I went through every single step I took:
+- I rely on charting and primarily on key levels/metrics on /ES combined with probabilities / statistics.
+- I do not use a bunch of indicators, I try keeping my charts always clean.
+- As a daily trader, I do not have time to look at heatmaps for hours and do any gex/gamma analysis. So don't ask me for that. There are so many tools you can subscribe to. Decide on your own. I use one, which I find straightforward and which saves me time.
+
+Context: SPX flipped into a real regime change overnight — POSITIVE gamma (net 0DTE GEX +$14.75B pre-market, building to +$17.4B by the open), a sharp reversal from the negative-gamma, put-heavy stretch that had dominated the prior two weeks. Positive gamma plus a call-heavy skew typically means dealers dampen moves rather than amplify them — good backdrop for fading a resistance level rather than chasing a breakout.
+
+Pre-market data: - GEX Regime: Positive Gamma, +$14.75B net 0DTE GEX - 0DTE Call Wall: 7,690 (Moderate) - 0DTE Put Wall: 7,650 (Fragile) - Gamma Flip: 7,656 — MODERATE, 32pts away - GEX Imbalance: 5.36:1, Call-Heavy
+
+r/options - ES early in the morning above Target 2.
+ES early in the morning above Target 2.
+05:20 AM: ES pressing into the 7,698-7,700 zone, my own chart's 2nd Target. Entry wasn't the best possible one — ES spiked to 7,707 minutes later — but the point isn't catching the best fill, it's reacting to pre-defined levels and executing. Scaled into a 10-lot bear call spread combo: SPX 7720/7730 (4 contracts) and 7725/7735 (6 contracts).
+
+The position dipped to -$275 shortly after entry as ES spiked toward the 3rd Target. Treated as a normal swing, not a thesis problem — with the level trusted, theta works in your favor from here. ES reversed right at the 7,700 zone at 04:52 AM. Today's real Daily Brief confirmed it independently — SPX Call Wall (GEX) 7,700, ""largest positive gamma concentration, primary resistance"" — and its own suggested setup was a Call Credit Spread at SPX 7720/7730, matching this trade almost exactly.
+
+r/options - Pic taken from www.gammawalls.com
+Pic taken from www.gammawalls.com
+08:35 AM: live GammaWalls scan confirmed the picture directly — Positive Gamma, 0DTE Call Wall 7,690 (Moderate), Put Wall 7,650 (Fragile), Flip 7,656 (Moderate). Switching to the 1DTE view showed Call Wall 7,650, Put Wall 7,600, both Moderate — internally consistent with the 0DTE read, and both matched my independent TradingView ES levels from the start of the session.
+
+By market open the position was +$619, and by ~20 minutes into the cash session it had grown to +$816 — with a limit order already working to close the 7720/7730 leg at $0.15 and start locking in profit rather than holding for every last cent. At 10:00 AM the session high was already in, with a clean change of character printing right at the 7,690-7,700 zone — the GammaWalls Call Wall lining up directly with a heavy sell order block on the ES chart itself. Two independent methods, same level, all session.
+
+Closed the 7720/7730 leg at $0.15, then the remaining leg at $0.10 roughly 30 minutes into the cash session. Final result: +$970 net, both legs done well before midday. Both spreads probably would have run to full credit if held — that wasn't the point.
+
+r/options - Only 30 Minutes Into Cash Session and Taking the $970 Profit (8/25)
+Key takeaway: credit spread premium decays slowly in the last ~$0.20 — it takes a genuinely drastic reversal to kill that remainder to zero. There's no edge in holding full size all day to squeeze out pennies while continuing to risk profit that's already earned. Close what you can, when you can, and let the discipline do the work.
+
+Later on I took one more credit spread with only 2 cons for $0.70 each, as the call wall was sitting and changing between the 7665 and 7690. So I shorted 7690. At around 7675 the marked showed several times problems of going higher.
+
+And all positions expired full credit.
+
+ES (SPX) Levels backed up by gex/gamma positioning is literally all I need for my trading. No fancy charts, not 10x screens, no 15 indicators. Levels and gamma positioning tracked via gammawalls.com throughout the session.
+
+Note: I am able to trade SPX options overnight due to IBKR (tradable 20 hours a day). You should check your brokerage too.
+
+And this is not a financial advice",trade_log,extra_data
+"Retroactive cancellation of trading transactions?
+I opened an account at Charles Schwab two months ago. After that, I started making a lot of money. [I traded in the spread of options on a certain stock. Minute trading. In two weeks, I made $25,000 on the $2,000 I just invested. After that, they closed my account and blocked access to my account for a whole month plus. After that, they started retroactively canceling hundreds of my trades every day. Today, my account is only $6,000.
+
+Is there anyone who has talked about this? Is there anything I can do about it? Who should I contact?",platform,corrected
 "1st time buying leap GOOG
 Hi guys, I am looking into starting trading options, specifically Leap call options. I am not interested in gambling with 0dte or any sorts of stuff like that. I watched a lot of videos on Leap calls and when to buy and all sorts of indicators. GOOG is now sitting at its 200 days moving average, and under the 20 days low bollinger bands. I am looking into buying the ITM 300$ call sept 17 with a delta of around 0.70. Since it’s my first time, I wanted to get some advice before buying since it’s still a huge premium to pay. I wanted you guys opinions on Leaps. Thanks",educational,pre-labelled
-"Early retirement has me rethinking options trading
-I'm 43. I Inherited wealth and retired in my thirties. I Learned options for mental stimulation, built my own method, done well
+"GTA 6/ TTWO call
+Put a call on TTWO until mid January that gets you past initial release and Christmas sales?",market_opinion,pre-labelled
+"Front Month IV problems in double calendars
+I’m currently running a double calendar which I opened on Monday of this week, my shorts expire this Friday and my longs expire the next Friday. Price in the underlying has barely moved, IV has inflated proportionately on both my longs and my shorts and the value of the calendar has not moved an inch. When I traded single calendars, the theta decay would most definitely have kicked in especially when price revisits but that’s not happening here. For those of you who trade calendars, how would you recommend I fix this problem? I can provide details as necessary but this is a general overview!",educational,pre-labelled
+"Full portfolio on Bitcoin ETF puts
+r/options - Full portfolio on Bitcoin ETF puts
+I'm betting my whole portfolio on Bitcoin puts. All i need to start making profit is for bitcoin to drop below 63k USD and i'll make profit.
 
-Losing my wife two years ago changed my outlook on time. Financially secure, so profit is no longer the point. I love the mental work of options, but wonder if I want lifelong daily market monitoring
+I'll make a crap ton if bitcoin bottoms below 55k by October.
 
-For those who've traded options for years, what made you stick with it, scale back, or walk away? Did you move toward more conservative strategies or focus on other parts of life?
+It's a pretty long Option (>2 months) so the delta is fine for now.
 
-I'd appreciate hearing about your experiences!",educational,pre-labelled
+My thesis is that August and September have always been bad months for bitcoin. Plus the war is definitely helping lower bitcoin.
+
+It's still a gamble, but a justified one.
+
+Wish me luck and praise be to Allah/Yahweh.
+
+PS : I got accepted at Wendy's in case this fails.",trade_log,extra_data
+"SPX retail credit spread ATM contract limitations
+I've recently switched to SPX for the sake of liquidity, bid ask spreads, and scalability, but what are realistic limitation for the quantity of contracts I can open on an individual position without fill issues? Is there any historical data out there that can help me understand these limitations? I trade exclusively credit spreads close to ATM.",educational,pre-labelled
+"Placing more than 390 option trades in a day
+What brokerage allows it? Did any of you exceed that number and not get notified? Or which brokerages flagged you? Thank you for any input.
+
+Edit: is this place dominated by bots? I asked for concrete names and instances and all I got are LLM type of definitions and vague responses. Wtf?",educational,pre-labelled
+"Option selling
+When your all selling options are you selling even if the stock is below its 200 sma?
+
+I find it beaten up stocks are good to sell but then again stocks like Adobe keep getting beat",educational,pre-labelled
+"SPX/ES Pre-Market Levels Held All Session — Missed a Planned Fill by $0.05, Still Closed +$362 on a
+Monday's session (8/24) was a good example of levels doing exactly what they said they'd do, even when the trade plan built around them didn't fully execute.
+
+Pre-market read:
+
+- ES overnight resistance at 7680 (SPX ≈ 7663) — the level that mattered most for the day. A clean break above it opened the upside case.
+
+- My own downside level of interest: ES 7650 (SPX ≈ 7633) — below this is where the bear case starts.
+
+r/options - SPX/ES Pre-Market Levels Held All Session — Missed a Planned Fill by $0.05, Still Closed +$362 on a
+r/options - SPX/ES Pre-Market Levels Held All Session — Missed a Planned Fill by $0.05, Still Closed +$362 on a
+- GammaWalls pre-market scan: Call Wall 7710 (Strong), Put Wall 7630 (Moderate), Gamma Flip 7678 (CAUTION, 26pts away), Net GEX -$11.02B — Negative Gamma regime.
+
+Plan was a put credit spread at 7600/7590 for $0.85 credit, 10 contracts, on a dip toward the put wall. Price never gave a real test of 7630 — it reversed at 7638, a good 8 points away from the wall itself — and by the time price got close enough to my strikes, the fill had collapsed to $0.05. Missed it by a nickel and didn't chase.
+
+Rather than force size into a session that had already shown its hand (Call Wall untested and Strong, Put Wall untested and holding), I stayed light: one call credit spread and one put credit spread, both closed at $0.05. Final result was a modest +$362 on a genuinely choppy day — no home run, but no forced risk either.
+
+r/options - Using IBKR as a broker.
+Using IBKR as a broker.
+Key takeaway: knowing both levels before the open — my own chart-based S/R and the independent gamma-positioning read — meant the session's behavior (range-bound, no wall tested, no breakout) was expected rather than a surprise. The missed fill cost some upside, but not respecting the setup would have cost more.
+
+Levels: ES/SPX support-resistance from my own chart analysis. Gamma exposure and wall strength scored via gammawalls.com",trade_log,extra_data

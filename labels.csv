@@ -2247,3 +2247,592 @@ The entire framework rests on one idea: stay green, stay small, and let the math
 When I call out a trade, I consider it successful if it hits the 20% target. Everything after that is bonus.
 
 ",trade_log,corrected
+"Risk manage my short SPX IC
+I had a short iron condor on that expired today. I closed the call side at .20 and booked my gain.
+
+My put gave me fits
+
+SPX OCT23 +7615/-7625P (20D) 10 contracts - closed 7623
+
+All week my short premium was more than I sold it for ($12). So I didn't see a way to close it and SPX was still in my range.
+
+Expiration day, SPX gapped down on the open but still above my strike.
+
+Took a break and when I came back SPX was below strike and I'm kicking myself for 10 contracts and the 10 wide spread.
+
+Took another break and SPX is hanging out at 7640, I'm watching, watching, refreshing pricing, premium dropping dropping. I keep watching premium at $6, $5, $4, $3.
+
+I have to get on a call with my boss so I pull up the -7625P and Buy to Close with a stop limit at $4.00 and limit at $4.50. About 10 minutes into my call it executes. So further kicking myself. I finish the call, SPX at 7630, I close out my 7610 while it still has value.
+
+Market closed at 7623 so had I let it expire I would have been fucht.
+
+My mistakes among many:
+
+10 wide on my long positions - ok for 1 lot but not for 10
+
+Expiration: I put the trade on Monday with a Friday expiration - I should have looked at pricing / ivol on other days - it seems that as soon as I put the short put on it was under water
+
+I'm trading on Fidelity and using trading view to chart - I keep a journal of the trades but it gets difficult to manage the P&L of the trade once you start unwinding - probably need to track this in excel to understand B/E points better (trading view is good visually)
+
+Did I do the right thing with the stop limit?
+
+I'm a chud",trade_log,extra_data
+"Low delta SPXW 1DTE Put selling back tests
+My post sharing my results for last year caused quite a discussion. In retrospect, I should have labeled the graph more clearly, because about half of the comments mistook the chart of P&L for a chart of my account value.
+
+But beyond the confusion, there were quite a few good points about tweaking the strategy, to run either spreads, 0DTE, or strangles. And a lot of people interested in backtesting results for various periods, which I'm happy to share.
+
+Strategy summary
+Before I go into the numbers, a quick recap of what my strategy is:
+
+Have an account with porfolio margin, that is fully invested in a mix of equity and bond ETFs (I run 50:50)
+
+Entry: 15min before close, sell a SPXW naked put expiring the next trading day (1DTE) at ~5 delta
+
+Sizing: I run 2 contracts on a $440k account, which is enough to survive a 20% drop in the index in one day. That's what I consider the worst realistic case (worst ever recorded SPY day)
+
+No active management, let expire (and sometimes pay for assignment)
+
+Backtest results
+All backtests start in 2016/1/1 (first date available in Whispertrades), have a starting portfolio value of $125k and are selling 2 contracts (in 2016, SPX was ~2k, so the sizing is about the same as my 2 contracts on a $440k portfolio).
+
+The backtest assumes your portfolio is in cash, to isolate the results of the option trading. To make the above strategy attractive vs just holding equity, you need to run it in an account with portfolio margin, so the option results are layers on top of your portfolio performance, but that's not simulated by the backtest.
+
+Each backtest has a link to the full backtest run on the platform, which should be public, so you can look into the results in more details. If you don't trust Whispertrades, the strategy is extremely simple, so should be easy to validate in whatever tool you trust. I'm reasonably confident that for such a simple setup, the results should not be very sensitive to data quality.
+
+Summary comparison
+A wide stop loss actually helped (assuming the backtest fills are realistic) - It's similar CAGR (10.8% vs 10.6%), with a smaller worst drawdown and almost double Sortino. I didn't dig into the details enough to understand how realistic the fills are, so this is the big caveat. Might play with adding these in my live trading
+
+Spreads are a terrible deal at 5 delta - The long put eats most of the premium, so you're left with 2.5% CAGR and the deepest drawdown (-22.7%). Defined risk doesn't mean less risk, you just lose in smaller chunks more often.
+
+The short call just isn't worth it - 1.6% CAGR over almost 11 years, and one bad week (the April 2025 tariff pause rally) wiped out years of gains. It's the only backtest that ran out of buying power, so couldn't enter positions later in the run as SPX value increased
+
+0DTE avoids the overnight risk, but most of the edge goes with it - It had the smallest drawdown (-10.5%), but only 4.0% CAGR vs 10.6% for 1DTE. The overnight premium is worth it for me personally
+
+None of these beat buy-and-hold SPX - If your choice is to run this backed by cash in RegT account, SPX did 13.1% CAGR over the same period, so you'd be better of being just long equity. But short volatility can be an attractive addition if you have portfolio margin and can layer it over your regular holdings
+
+Strategy        End value        Total return        CAGR        Max DD        Sortino        Corr. to SPX        Link
+0) 1DTE naked put, no SL (my strategy)        $370,904        196.7%        10.6%        -14.8%        0.37        0.40        link
+1) 1DTE put spread 50p, no SL        $163,070        30.5%        2.5%        -22.7%        0.02        0.38        link
+2) 1DTE naked put, 10x SL        $377,942        202.4%        10.8%        -13.9%        0.66        0.44        link
+3) 1DTE naked call only, no SL        $147,791        18.2%        1.6%        -11.8%        -0.06        -0.39        link
+4) 0DTE naked put, no SL        $190,867        52.7%        4.0%        -10.5%        0.16        0.22        link
+SPX (benchmark)        ~$474,400        279.5%        13.1%        -33.9%        0.79        1.00        –
+0) Results for the strategy as I run it
+1DTE (last 15min entry) SPXW naked short put at 5 delta, no stop loss
+
+Backtest: https://whispertrades.com/backtests/CMVDPDROK7/view
+
+Metric        Strategy        SPX
+End portfolio value        $370,904        ~$474,400
+Total return        196.7%        279.5%
+CAGR        10.6%        13.1%
+Max drawdown        -14.8% (-$50,072)        -33.9%
+Sortino        0.37        0.79
+Annualized vol        8%        18%
+Correlation / Beta to SPX        0.40 / 0.18        –
+Performance by year (max drawdown within the year in brackets)
+
+Year        Strategy        SPX
+2016        +7.5% (-6.5%)        +10.0% (-9.3%)
+2017        +14.2% (-2.2%)        +18.0% (-2.8%)
+2018        +0.8% (-11.2%)        -5.0% (-19.8%)
+2019        +15.5% (-3.3%)        +26.2% (-6.8%)
+2020        +26.5% (-7.2%)        +21.1% (-33.9%)
+2021        +21.3% (-2.4%)        +24.7% (-5.2%)
+2022        +5.8% (-6.4%)        -18.7% (-25.4%)
+2023        +10.8% (-1.1%)        +22.6% (-10.3%)
+2024        +0.9% (-5.1%)        +21.8% (-8.5%)
+2025        +3.3% (-13.5%)        +16.9% (-18.9%)
+2026 YTD        +10.7% (-6.3%)        +13.2% (-9.1%)
+1) Running spreads instead of naked puts
+1DTE SPXW put credit spreads, with main put at 5 delta 50p width ($5k max loss), no stop loss.
+
+Backtest: https://whispertrades.com/backtests/QA2KFNLK0X/view
+
+Metric        Strategy        SPX
+End portfolio value        $163,070        ~$474,400
+Total return        30.5%        279.5%
+CAGR        2.5%        13.1%
+Max drawdown        -22.7% (-$38,316)        -33.9%
+Sortino        0.02        0.79
+Annualized vol        10%        18%
+Correlation / Beta to SPX        0.38 / 0.20        –
+Performance by year (max drawdown within the year in brackets)
+
+Year        Strategy        SPX
+2016        +1.5% (-6.8%)        +10.0% (-9.3%)
+2017        +7.4% (-2.4%)        +18.0% (-2.8%)
+2018        -11.3% (-15.0%)        -5.0% (-19.8%)
+2019        +10.3% (-5.2%)        +26.2% (-6.8%)
+2020        +7.6% (-6.8%)        +21.1% (-33.9%)
+2021        +10.4% (-4.5%)        +24.7% (-5.2%)
+2022        -7.3% (-15.0%)        -18.7% (-25.4%)
+2023        +9.1% (-2.3%)        +22.6% (-10.3%)
+2024        -5.0% (-10.5%)        +21.8% (-8.5%)
+2025        -3.4% (-15.9%)        +16.9% (-18.9%)
+2026 YTD        +10.9% (-6.2%)        +13.2% (-9.1%)
+2) Adding a stop-loss
+1DTE SPXW naked short put at 5 delta, stop loss at 10x credit received
+
+Backtest: https://whispertrades.com/backtests/SXYTNEL8YS/view
+
+Metric        Strategy        SPX
+End portfolio value        $377,942        ~$474,400
+Total return        202.4%        279.5%
+CAGR        10.8%        13.1%
+Max drawdown        -13.9% (-$27,049)        -33.9%
+Sortino        0.66        0.79
+Annualized vol        5.5%        18%
+Correlation / Beta to SPX        0.44 / 0.14        –
+Performance by year (max drawdown within the year in brackets)
+
+Year        Strategy        SPX
+2016        +11.8% (-2.7%)        +10.0% (-9.3%)
+2017        +13.3% (-0.8%)        +18.0% (-2.8%)
+2018        +10.3% (-3.6%)        -5.0% (-19.8%)
+2019        +8.5% (-2.6%)        +26.2% (-6.8%)
+2020        +18.2% (-13.9%)        +21.1% (-33.9%)
+2021        +18.6% (-1.6%)        +24.7% (-5.2%)
+2022        +5.2% (-5.1%)        -18.7% (-25.4%)
+2023        +11.5% (-1.1%)        +22.6% (-10.3%)
+2024        +0.0% (-5.3%)        +21.8% (-8.5%)
+2025        +9.3% (-5.6%)        +16.9% (-18.9%)
+2026 YTD        +11.2% (-1.8%)        +13.2% (-9.1%)
+3) Selling strangles instead
+1DTE SPXW short call at 5 delta, no stop loss - Only the call, to isolate the marginal impact of adding the short call
+
+Backtest: https://whispertrades.com/backtests/4CEOZEUPUD/view
+
+Metric        Strategy        SPX
+End portfolio value        $147,791        ~$474,400
+Total return        18.2%        279.5%
+CAGR        1.6%        13.1%
+Max drawdown        -11.8% (-$18,775)        -33.9%
+Sortino        -0.06        0.79
+Annualized vol        6.6%        18%
+Correlation / Beta to SPX        -0.39 / -0.15        –
+Performance by year (max drawdown within the year in brackets)
+
+Year        Strategy        SPX
+2016        -2.4% (-5.6%)        +10.0% (-9.3%)
+2017        +3.0% (-1.7%)        +18.0% (-2.8%)
+2018        -3.6% (-8.5%)        -5.0% (-19.8%)
+2019        +2.5% (-4.5%)        +26.2% (-6.8%)
+2020        +7.4% (-7.5%)        +21.1% (-33.9%)
+2021        +3.7% (-3.0%)        +24.7% (-5.2%)
+2022        +5.3% (-5.8%)        -18.7% (-25.4%)
+2023        +2.6% (-2.9%)        +22.6% (-10.3%)
+2024        +3.2% (-2.7%)        +21.8% (-8.5%)
+2025        -2.5% (-11.8%)        +16.9% (-18.9%)
+2026 YTD        -1.8% (-5.9%)        +13.2% (-9.1%)
+4) Selling 0DTE instead of 1DTE to avoid overnight risk
+0DTE (first 15min entry) SPXW naked short put at 5 delta, no stop loss
+
+Backtest: https://whispertrades.com/backtests/USLN3YKR5Q/view
+
+Metric        Strategy        SPX
+End portfolio value        $190,867        ~$474,400
+Total return        52.7%        279.5%
+CAGR        4.0%        13.1%
+Max drawdown        -10.5% (largest $ drawdown: -$16,924)        -33.9%
+Sortino        0.16        0.79
+Annualized vol        5.4%        18%
+Correlation / Beta to SPX        0.22 / 0.07        –
+Performance by year (max drawdown within the year in brackets)
+
+Year        Strategy        SPX
+2016        +2.5% (-1.1%)        +10.0% (-9.3%)
+2017        +3.9% (-0.3%)        +18.0% (-2.8%)
+2018        -7.9% (-10.5%)        -5.0% (-19.8%)
+2019        +10.6% (-0.6%)        +26.2% (-6.8%)
+2020        +13.0% (-2.9%)        +21.1% (-33.9%)
+2021        +4.4% (-1.8%)        +24.7% (-5.2%)
+2022        +9.2% (-2.9%)        -18.7% (-25.4%)
+2023        +5.7% (-3.5%)        +22.6% (-10.3%)
+2024        -3.5% (-6.0%)        +21.8% (-8.5%)
+2025        +1.0% (-8.7%)        +16.9% (-18.9%)
+2026 YTD        +6.1% (-3.7%)        +13.2% (-9.1%)",trade_log,extra_data
+"I backtested 17,100 option-selling strategies on SPY and QQQ (2022 to 2026)
+Backtest of option selling on SPY and QQQ, split by dealer gamma exposure (GEX). Method and numbers below.
+
+Setup
+
+SPY and QQQ, January 2022 to October 2026.
+
+17,100 strategies: 6 structures (short put, short call, strangle, put and call credit spreads, iron condor), 6 deltas (0.10 to 0.40), 4 expiries (0DTE to 1 month), 6 exits, 15 GEX and VRP filters.
+
+Core test: same-day short strangles at 0.10 or 0.25 delta, 0DTE or 1-week expiry, sold at 09:35 ET and bought back at 15:55 ET.
+
+Contracts: nearest to target delta, open interest of at least 250, spread of at most 20%.
+
+Priced from archived bid/ask quotes at four fill levels (mid to full spread), $1 per contract per leg.
+
+Regime: net GEX and gamma flip from the previous session's 15:55 ET snapshot, so no look-ahead.
+
+Where the losses were
+
+Share of trades, dollar losses and worst 5% of trades that fell on negative-GEX days:
+
+ETF        Strangle        Trades        Losses        Worst 5%        p
+QQQ        0DTE, 0.10 delta        54%        71%        66%        0.031
+QQQ        0DTE, 0.25 delta        55%        68%        67%        0.049
+QQQ        1 week, 0.10 delta        59%        76%        81%        0.002
+QQQ        1 week, 0.25 delta        60%        75%        77%        0.013
+SPY        0DTE, 0.10 delta        60%        74%        71%        0.027
+SPY        0DTE, 0.25 delta        63%        72%        76%        0.032
+SPY        1 week, 0.10 delta        62%        73%        78%        0.008
+SPY        1 week, 0.25 delta        63%        73%        75%        0.027
+p is the share of over 1,000 calendars, each the negative-gamma calendar shifted by 63 or more sessions, that caught the losses at least as well.
+
+Selling only on positive-GEX days
+
+Sharpe of monthly P&L and max drawdown at mid fills:
+
+ETF        Strangle        Sharpe, every day        Sharpe, +GEX only        Max DD, every day        Max DD, +GEX only
+QQQ        0DTE, 0.25 delta        +0.35        +1.38        -$6,402        -$2,856
+QQQ        0DTE, 0.10 delta        +0.04        +1.06        -$4,122        -$1,535
+QQQ        1 week, 0.25 delta        -0.25        +1.14        -$5,687        -$845
+QQQ        1 week, 0.10 delta        -0.40        +1.02        -$3,712        -$445
+SPY        0DTE, 0.25 delta        +0.26        +0.54        -$5,907        -$2,276
+SPY        0DTE, 0.10 delta        +0.20        +0.66        -$3,052        -$1,377
+SPY        1 week, 0.25 delta        -0.33        +0.25        -$4,724        -$1,218
+SPY        1 week, 0.10 delta        -0.55        +0.18        -$3,725        -$690
+Fills
+
+At full bid/ask, selling every day lost money in every setup. The filter stayed ahead at every fill level, but at full spread all four filtered SPY setups and two of the four filtered QQQ setups also lost money. QQQ 0DTE at 0.25 delta held +0.72 filtered against -0.47 every day.
+
+Across all 17,100 strategies
+
+Strongest same-day rule: positive GEX with price above the gamma flip, using the flip only on days it passed coverage, quote-quality and stability checks. It beat random calendars on both ETFs (p = 0.005 SPY, 0.006 QQQ).
+
+Plain positive GEX passed on QQQ but not on SPY (p = 0.21).
+
+Negative GEX and high VRP as filters on their own did no better than random.
+
+Taking profit at 50% of credit cut max drawdown in 179 of 180 held-to-expiry designs (median 28%).
+
+Highest Sharpe overall: 0.10-delta 1-month SPY put sold every day, held to expiry. Sharpe +4.08, 97% winners, and a $57,739 drawdown while positions were open. GEX filters lowered its Sharpe.
+
+Not investment advice.
+link to full article",trade_log,extra_data
+"A year of selling boring SPX options
+r/options - A year of selling boring SPX options
+October 2025, I've started regularly selling low delta SPX 1DTE puts, after getting inspired by Big ERN and WealthyOption strategies.
+
+Strategy
+The strategy I'm running is very mechanical, and quite simple (takes about 5 minutes most days):
+
+Sell 1DTE SPX puts on portfolio margin, around 5 delta (strikes tend to be ~1.5% OTM)
+
+Entry:
+
+1-3 contracts around day close (within 15 min of market close),
+
+Sometimes I'll also sell an extra 0DTE pre-market, if volatility jumped and I believe there's not a solid catalyst
+
+Exit:
+
+Let expire most days
+
+I'll check pre-market when I get up and sometimes close at a loss if a catalyst event happened - I don't have set rules for this
+
+It's a classic case of picking up pennies in front of a steamroller, or selling casino tickets. Most days, you collect $200-300, and every now and then, you get hit for thousands or tens of thousands.
+
+Why do I run this
+Extra income on top of my portfolio - I'm retired, so rely on my portfolio for income and selling puts generates cash, without having to draw down the portfolio. While the return % is not a lot, it's essentially free extra money (until the market has a 10% intraday crash in period of low volatility, I accept that risk)
+
+Low-ish correlation with long term SPY - The low delta put selling P&L is weakly correlated with SPX itself (the strategy is profitable on most longer term declines and bleeds only when the regime changes abruptly). This gives me a hedge against a prolonged bear market, and helps with sequence of returns risk
+
+Results
+I do this on top of my taxable portfolio in IBKR, with portfolio margin, so the put selling returns come on top of the performance of the underlying portfolio. After a year of running this, the results are:
+
+Portfolio size: ~$440k - mix of global equity and bond ETFs
+
+Gross premium collected: $80,840
+
+Debit (from assignments): $41,698 - worst day $26k
+
+Fees: $658
+
+Net P&L: $38,484 ( ~8%)
+
+Premium capture rate (share of gross premium kept): 47.60%
+
+The above returns are based on selling 1-3 contracts per day, with the majority of days being 2 contracts. Assuming a max loss per contract of about $110k (on a 15% 1 day drop), this is about 50% of the porfolio size. I could run the same strategy with 3, or potentially even 4 contracts, which would increase the return, but at the moment, I'm not comfortable with that amount of risk.
+
+Lessons learned
+Paper trading was worthless as a test of the strategy - I ran the strategy for about a month in a paper trading account, to test it, but ultimately, this was pretty pointless, beyond learning the mechanics of trading on IBKR. The emotions with real money are completely different, and I still shit the bed when that first 8k drawdown hit
+
+Researching the strategy and running back-tests kept me going - Before running this, I was strictly a VOO and chill kind of person. I spent a long time researching options, the strategy, and reading different points of view, as well as running my own back-tests before starting live trading. This gave me a fairly strong conviction that the strategy is long term profitable, which was what kept me going after the first sizable loss.
+
+Active management based on my judgement cost me P&L - Sometimes, I closed positions early if a major event happened, or if I happened to watch the price action and it was too close for comfort to my strike. And at times, I reduced the number of contracts from 2 to 1, when I believed the market was due a correction. In both case, had I done nothing, the strategy would have been more profitable overall. Knowing this, I'm still sometimes actively managing it, but I accept it's more for my comfort, than to improve performance
+
+Mechanical stop losses & close early decrease P&L - I've not run these live myself, but from all the back-testing I've done, setting any kind of mechanical stop loss, or closing early reduces the P&L. Mainly due to the fact that the puts often explode in value somewhere during the day, but still expire worthless most of the time.
+
+Profitability is entirely driven by your worst days - If I could have somehow avoided the 3 worst days, I'd have been 2x as profitable. Based on my experience from the year, I'm unfortunately not able to consistently do this. So I budget on around 40% premium capture rate",trade_log,extra_data
+"Open a leap for Jan 2028
+Reflecting on this year's leap and how the market went I'm debating on opening another leap as the geopolitical, bonds and ai is up in the air with how things are.
+
+Looking at the jan 2028 700c for $12k-$13 almost $14k. This year I sold short dte calls and took profit at 30%+- depending on the market structure and trend. Planning to do the same.
+
+Paper trading the option I'm looking at, already up 2.88% ($425) and selling short dte at the ideal strikes 30dte. Trying to buy it in brokerage if it falls back to the price or purchase or lower. Willing to hold and cut loss at maybe 8-10% idk still adjusting and debating.",trade_log,extra_data
+"10 Minute Trading
+Not advice just how I make my money but anyone with risk appetite should check TSLA last 10 min of day. It will spike or drop more so than not. Always 10 minutes to close. Check for yourself. The contracts are cheap and can 10x or better in that time. It happens a lot. Look for it to move from one end of the channel to the other especially on days contracts expire Mon Wed Fri. It's make or break you will make a killing or lose it all. The wins have outweighed my losses by a lot. Not advising anyone to do this as you can lose it all quickly speaking from experience. Also could do shares which is less risky but also very profitable in a short time. Good luck",trade_log,extra_data
+"Once I started trading volatility only, my returns skyrocketed
+r/options - Once I started trading volatility only, my returns skyrocketed
+I have long since been an advocate for CSPs, the strategy itself works great but the covered calls when assigned left money on the table and the calls themselves had such low IV they hardly made up for the cost of assignment and capital tie up
+
+I switched to a pure volatility trading strategy, usually around earnings of major companies. I look for IV spikes into earnings as far out in term as possible, and as wide as possible, sometimes 6 months out and will sell as wide as I can a naked strangle that my capital will allow while leaving some to hedge the delta over the 6 months
+
+The IV may take months to drop, but the results are incredible with some short term hedging of noise",trade_log,extra_data
+"Nearly $800 Profit After a Volatile SPX Reversal Day — and a Lesson on Greed (9/1)
+Continuation of yesterday's post — real numbers, no fluff, this is how the day actually played out.
+
+Overnight, the warning from yesterday played out: one of the two walls had to give, and this time it was the put side. Pre-market saw real selling pressure testing the ES 7659 level.
+
+r/options - ES levels on TV.
+ES levels on TV.
+By the open, the 0DTE put wall was only Fragile at 7625, with the call wall Moderate at 7705. Price dipped straight into the open but bounced off the range support inside the very first 15-minute candle and turned higher.
+
+r/options - gammawalls.com
+gammawalls.com
+An hour in, the position was sitting on roughly $820 of profit — well clear of the 7659 level. With 12 contracts still open, I made the classic mistake: held for another $80 instead of taking the win. Greed, plain and simple, and I know better. The market dipped, the paper profit evaporated, and a resting order to lock in $640 didn't fill. Had to sit through the 7625 support actually getting tested and breached on a third dip before finally closing the main position, buying it back from 0.85 down to 0.15.
+
+Added one more small position later for $80, bringing the total for the day to $779.
+
+r/options - Reversal on SPX
+Reversal on SPX
+Lesson worth repeating: once you're at 70-80% of max profit on a spread, take it and walk away — especially on a volatile, high-volume day like this one. Riding a position from near-full credit into a real drawdown, then white-knuckling it back to almost-full credit, isn't a repeatable strategy. It's luck.
+
+r/options - IBKR
+IBKR
+Looking at tomorrow: this makes three red days in a row. The real concern is what the close shows for the next session — the put wall has already slipped back to 7550, and there's no reliable support level on the chart between here and there. That's a real warning sign. On the upside, there's a resistance zone around SPX 7670 that I'm skeptical this tape breaks without a genuine catalyst.
+
+r/options - 1DTE levels
+1DTE levels
+Current lean: a put credit spread doesn't look attractive up here — if anything, only below 7550 on a real dip. A call credit spread up around 7710, respecting that 7670 resistance, looks like the more sensible side. All of that can change overnight, but you can't trade a guess. In hindsight, a lower entry below 7590 today would have priced in more credit — impatience cost me there.
+
+Levels SPX Source: gammawalls.com",trade_log,extra_data
+"Snapshot of my IBKR 3 months net value change
+Here is my strategy post:
+
+https://www.reddit.com/r/options/comments/1vxb1ur/an_option_hedged_market_neutral_strategy/
+
+As mentioned in that post: I've run this strategy for 3 months and its advantage is the stable PL (Profit & Loss).
+
+Here is the snapshot of my IBKR 3-month net value change, which shows the same. I took the snapshot of app-switch on iPhone to prove that it's not a forged image.
+
+As comparison, I attached snapshot of Nasdaq in the past 3 months -- note that it had a sharp drop at end of July but my PL is still stable at that time.
+
+(the SPX positions below are parts of BOX spreads so plz ignore)
+
+r/options - Snapshot of my IBKR 3 months net value change
+r/options - Snapshot of my IBKR 3 months net value change
+",trade_log,extra_data
+"Down $25k as a 23 y/o college student trading options
+
+r/options - Down $25k as a 23 y/o college student trading options
+Page 1 (Current page)
+Page 2
+Page 3
+
+
+Item 1 of 3
+I nail the technical read more often than not, and I’ve had strong days off a clean setup — but I’m still down $25k lifetime because I keep breaking my own rules once real money’s on the line. I’m in school full-time and working, hoping to eventually go full-time into trading if I can get consistent, but right now discipline is what’s torching the account, not my analysis.",trade_log,extra_data
+"Spy put 766 8/28
+Bought these at 771.50 this afternoon. Hopefully a dump tomorrow morning. Today felt like a fake pump.
+
+Edit
+
+Got fucked",trade_log,extra_data
+"How are you doing so far this year?
+I'm attaching a print from my account showing performance. I'm looking to see if I'm doing good, better, or just keeping up with the rest of the active traders on here. Just to show I'm not just trying to show off a good year I've been doing what I think is okay for the past 3 years. If you could let me know how I compare to you it would be appreciated. While I'm happy with my performance and I manage to earn a living this way it's always nice to benchmark against other traders as it can either bolster your confidence or destroy it. 😄
+
+Performance
+Your Individual Brokerage -5863 performance is up 30.58% from January 1, 2026 to August 26, 2026. You can compare this account to major benchmarks.
+Performance
+
+Your Individual Brokerage -5863 performance is up 83.25% from September 1, 2023 to August 26, 2026. You can compare this account to major benchmarks.",trade_log,extra_data
+"Sold the MRVL $230 put into earning
+MRVL was hanging around $245–247 when I pulled the trigger. Sold the $230 put for around $5.65, so I pocketed roughly $565 upfront. If MRVL behaves itself after earnings, awesome I keep the $565 and move on 😂 If earnings decides to send MRVL to the basement and I get assigned, I'm effectively getting 100 shares around $224.35. I'm totally fine with that because I'm bullish on MRVL long term anyway. Barchart was showing about an 8.2% expected move, with the downside around $227, so $230 definitely isn't the ""safe"" strike. There's some spice here 🌶️ And yeah, MRVL has already had a monster run, so a nasty correction wouldn't exactly shock me. I'm definitely not looking at that $565 like it's free money. Worst case, I become the proud owner of 100 MRVL shares 😂 Then I'll sit on them and eventually start selling covered calls and annoy the stock until it pays me back. Let's see what earnings brings 🍿",trade_log,extra_data
+"Just sold NVDA put option for strike $210
+I sold one NVDA $210 put expiring 8/28 and collected a $590 premium.
+NVDA is currently around $208.34, putting the option slightly in the money. My effective breakeven is $204.10, and I’m comfortable owning 100 shares at that price if assigned.
+The implied volatility is over 100%, so the premium was attractive, but this is obviously a very short-duration trade with plenty of risk.",trade_log,extra_data
+"Anyone loading up on NVDA LEAPS calls?
+Grabbed a few NVDA calls for Jan 21, 2028 @ 225 strike.",trade_log,extra_data
+"Only 30 Minutes Into Cash Session and Taking the $970 Profit (8/25)
+The previous post was not quite understandable for some readers. Therefore a quick note before I went through every single step I took:
+- I rely on charting and primarily on key levels/metrics on /ES combined with probabilities / statistics.
+- I do not use a bunch of indicators, I try keeping my charts always clean.
+- As a daily trader, I do not have time to look at heatmaps for hours and do any gex/gamma analysis. So don't ask me for that. There are so many tools you can subscribe to. Decide on your own. I use one, which I find straightforward and which saves me time.
+
+Context: SPX flipped into a real regime change overnight — POSITIVE gamma (net 0DTE GEX +$14.75B pre-market, building to +$17.4B by the open), a sharp reversal from the negative-gamma, put-heavy stretch that had dominated the prior two weeks. Positive gamma plus a call-heavy skew typically means dealers dampen moves rather than amplify them — good backdrop for fading a resistance level rather than chasing a breakout.
+
+Pre-market data: - GEX Regime: Positive Gamma, +$14.75B net 0DTE GEX - 0DTE Call Wall: 7,690 (Moderate) - 0DTE Put Wall: 7,650 (Fragile) - Gamma Flip: 7,656 — MODERATE, 32pts away - GEX Imbalance: 5.36:1, Call-Heavy
+
+r/options - ES early in the morning above Target 2.
+ES early in the morning above Target 2.
+05:20 AM: ES pressing into the 7,698-7,700 zone, my own chart's 2nd Target. Entry wasn't the best possible one — ES spiked to 7,707 minutes later — but the point isn't catching the best fill, it's reacting to pre-defined levels and executing. Scaled into a 10-lot bear call spread combo: SPX 7720/7730 (4 contracts) and 7725/7735 (6 contracts).
+
+The position dipped to -$275 shortly after entry as ES spiked toward the 3rd Target. Treated as a normal swing, not a thesis problem — with the level trusted, theta works in your favor from here. ES reversed right at the 7,700 zone at 04:52 AM. Today's real Daily Brief confirmed it independently — SPX Call Wall (GEX) 7,700, ""largest positive gamma concentration, primary resistance"" — and its own suggested setup was a Call Credit Spread at SPX 7720/7730, matching this trade almost exactly.
+
+r/options - Pic taken from www.gammawalls.com
+Pic taken from www.gammawalls.com
+08:35 AM: live GammaWalls scan confirmed the picture directly — Positive Gamma, 0DTE Call Wall 7,690 (Moderate), Put Wall 7,650 (Fragile), Flip 7,656 (Moderate). Switching to the 1DTE view showed Call Wall 7,650, Put Wall 7,600, both Moderate — internally consistent with the 0DTE read, and both matched my independent TradingView ES levels from the start of the session.
+
+By market open the position was +$619, and by ~20 minutes into the cash session it had grown to +$816 — with a limit order already working to close the 7720/7730 leg at $0.15 and start locking in profit rather than holding for every last cent. At 10:00 AM the session high was already in, with a clean change of character printing right at the 7,690-7,700 zone — the GammaWalls Call Wall lining up directly with a heavy sell order block on the ES chart itself. Two independent methods, same level, all session.
+
+Closed the 7720/7730 leg at $0.15, then the remaining leg at $0.10 roughly 30 minutes into the cash session. Final result: +$970 net, both legs done well before midday. Both spreads probably would have run to full credit if held — that wasn't the point.
+
+r/options - Only 30 Minutes Into Cash Session and Taking the $970 Profit (8/25)
+Key takeaway: credit spread premium decays slowly in the last ~$0.20 — it takes a genuinely drastic reversal to kill that remainder to zero. There's no edge in holding full size all day to squeeze out pennies while continuing to risk profit that's already earned. Close what you can, when you can, and let the discipline do the work.
+
+Later on I took one more credit spread with only 2 cons for $0.70 each, as the call wall was sitting and changing between the 7665 and 7690. So I shorted 7690. At around 7675 the marked showed several times problems of going higher.
+
+And all positions expired full credit.
+
+ES (SPX) Levels backed up by gex/gamma positioning is literally all I need for my trading. No fancy charts, not 10x screens, no 15 indicators. Levels and gamma positioning tracked via gammawalls.com throughout the session.
+
+Note: I am able to trade SPX options overnight due to IBKR (tradable 20 hours a day). You should check your brokerage too.
+
+And this is not a financial advice",trade_log,extra_data
+"SPX/ES Pre-Market Levels Held All Session — Missed a Planned Fill by $0.05, Still Closed +$362 on a
+Monday's session (8/24) was a good example of levels doing exactly what they said they'd do, even when the trade plan built around them didn't fully execute.
+
+Pre-market read:
+
+- ES overnight resistance at 7680 (SPX ≈ 7663) — the level that mattered most for the day. A clean break above it opened the upside case.
+
+- My own downside level of interest: ES 7650 (SPX ≈ 7633) — below this is where the bear case starts.
+
+r/options - SPX/ES Pre-Market Levels Held All Session — Missed a Planned Fill by $0.05, Still Closed +$362 on a
+r/options - SPX/ES Pre-Market Levels Held All Session — Missed a Planned Fill by $0.05, Still Closed +$362 on a
+- GammaWalls pre-market scan: Call Wall 7710 (Strong), Put Wall 7630 (Moderate), Gamma Flip 7678 (CAUTION, 26pts away), Net GEX -$11.02B — Negative Gamma regime.
+
+Plan was a put credit spread at 7600/7590 for $0.85 credit, 10 contracts, on a dip toward the put wall. Price never gave a real test of 7630 — it reversed at 7638, a good 8 points away from the wall itself — and by the time price got close enough to my strikes, the fill had collapsed to $0.05. Missed it by a nickel and didn't chase.
+
+Rather than force size into a session that had already shown its hand (Call Wall untested and Strong, Put Wall untested and holding), I stayed light: one call credit spread and one put credit spread, both closed at $0.05. Final result was a modest +$362 on a genuinely choppy day — no home run, but no forced risk either.
+
+r/options - Using IBKR as a broker.
+Using IBKR as a broker.
+Key takeaway: knowing both levels before the open — my own chart-based S/R and the independent gamma-positioning read — meant the session's behavior (range-bound, no wall tested, no breakout) was expected rather than a surprise. The missed fill cost some upside, but not respecting the setup would have cost more.
+
+Levels: ES/SPX support-resistance from my own chart analysis. Gamma exposure and wall strength scored via gammawalls.com",trade_log,extra_data
+"$700k in SMCI leaps ($300k profit)
+Position: 420 contracts SMCI 25C 06-2027 exp
+
+Bought these contracts mid July when stock was trading at $25, at about $8.6 each.. stock has a pretty good 1- month run up.. now trading about $17 per contracts",trade_log,extra_data
+"Need crcl to go over 85 at open? Am I cooked?
+Well I did it again, I averaged into a bad position at first.I was up about 50%.About a $1000, I was up and I told myself just sell, I'm not going to make a $1000 this week in my job.Why don't I just saw right now in ten minutes.
+
+But nope I wanted more, and then I started averaging down, and now I need circle to at least open up the first 5 minutes of the market, do the explosive move that the market does sometimes and get out. So I'm hoping that this can happen tomorrow last year when circle IPO, it was always popping. Really hard at the open to crash, or crashing down to open to pop-up, so let's see",trade_log,extra_data
+"Google option call at $379 strike price
+Today i just dropped 11k into a google option at a $379 strike price. I figured Google is a safe investment and is bound to reach $400 again in the future.",trade_log,extra_data
+"MU long term options, sold last earnings, finally starting to pay me premium
+I sold 4x naked wide strangles going into last earnings, when the Oct IV far way far OTM options were at around a 104% IV (we are talking like 30% out of the money)
+
+I sold that strangle and struggled hard to hedge it through the down slide of chips, but the holding of that insurance paid off big time
+
+had to roll and use short term options to hedge the bleed, but the IV on these have finally collapsed almost 40%
+
+Up 40k the past 3 months alone
+
+Long term options work when you allow then to work, I will never have my core options positions be short term again",trade_log,extra_data
+"The emotions is the hard part
+I'm net ~$120 in the hole on some trades. My win rate is high, though my drawdown seems to be higher. I'm really just digging in for real with the live account, and keeping risk super low.
+
+I had bull call spread running and some news happened. I chose to close with a $300 loss instead of waiting and risking a $710 loss. I closed the trade and 20 minutes later if I stayed in, I'd have profited $115. I want stab my eyes out, crush my testicles with a rubber mallet, and slice checker board patterns into my skin with a dull razor. No joke. Prior to this point I've done the things, learned the mechanics and made the plans. I'm no expert obviously, but I'm going for low risk and limited exposure. My loss isn't bad, I see how I can improve my choices, but my ego wants to see me suffer because I'm a loser. I understand losing is mathematically integral to trading, but this string of bad, panicked choices right off the rip is killing me this morning.",trade_log,extra_data
+"Am I cooked chat? Need tsla over 350 by tomrorow.. market kind of moving so
+I kept buying to get average down. I need tsla to move at open over 345 by tomrorow.. market is in a squeeze with memory so maybe trickles. I plan to cut by end of day if no movement in my favor",trade_log,extra_data
+"Full portfolio on Bitcoin ETF puts
+r/options - Full portfolio on Bitcoin ETF puts
+I'm betting my whole portfolio on Bitcoin puts. All i need to start making profit is for bitcoin to drop below 63k USD and i'll make profit.
+
+I'll make a crap ton if bitcoin bottoms below 55k by October.
+
+It's a pretty long Option (>2 months) so the delta is fine for now.
+
+My thesis is that August and September have always been bad months for bitcoin. Plus the war is definitely helping lower bitcoin.
+
+It's still a gamble, but a justified one.
+
+Wish me luck and praise be to Allah/Yahweh.
+
+PS : I got accepted at Wendy's in case this fails.",trade_log,extra_data
+"50 Trades in - A Reflection
+r/options - 50 Trades in - A Reflection
+Like many new options traders, I initially thought day trading was the route I should take. A good friend of mine who's an ex-Fidelity guy (and has done very well since) suggested I replace basically everything I was thinking about day trading, including the term itself, with options.
+
+I'm pretty risk averse and don't have deep pockets, so I worked with my friend to develop an approach designed to mitigate as much risk as reasonably possible. I did a bunch of research ahead of time and paper traded throughout January 2026 before finally pulling the trigger in February.
+
+For what it's worth, this has been my system so far:
+
+Highly liquid ETFs - primarily SPY and QQQ
+
+$10-wide put credit spreads
+
+Originally 30+ DTE
+
+One contract per trade for at least my first 30 trades, then gradually increased position size as buying power/experience grew
+
+Generally ≤ .25 delta at entry
+
+Close at or above 60% premium realized
+
+More recently, I've tightened that into 40+ DTE, ≤ .20 delta and usually 3 or 5 contracts per position. I've also added an early harvest rule: if a new 40+ DTE position reaches 30%+ profit within its first five trading days, I'll take the profit rather than waiting weeks for theta to accelerate. Then I'll redeploy the buying power if another qualifying setup is available.
+
+You can see in the spreadsheet (you may have to zoom - apologies) where I deviated from the system and experimented with debit spreads, iron condors and butterflies. I had some wins and some losses there before ultimately returning to the boring, disciplined approach.
+
+Full disclosure: I recognize that a generally flat-to-up market (since February) has been favorable to the strategy, even though we've had some pretty substantial bouts of volatility along the way.
+
+Bottom line: so far it's fitting my personality fairly well. I'm mostly posting because I've learned quite a bit from lurking here and figured I'd share what's been working for me so far.",trade_log,extra_data
+"Racking up 100% trading options day after day adds up to big money
+r/options - Racking up 100% trading options day after day adds up to big money
+(Click on the chart panel for an expanded view.)
+
+Like I’ve often said with the #SimpleOptionsDayTrade all you need is $QQQ and/or $SPY. Both have racked the 100% profit targets again today (see the yellow and white flags on the charts' right axis) for dollars gained), $1,000 plus for each $1K day trade.
+
+THE ENTRY SIGNAL
+
+If the SPY calls or QQQ calls or a STOCK calld are above the open, BUY THE CALLS. If the SPY puts or QQQ puts or a STOCK puts are above the open, BUY THE PUTS.
+
+THE PROFIT TARGET
+
+At least, a 100% gain for the day.
+
+THE SELL SIGNAL
+
+If buying other than 0DTE options, never hold overnight. It is a day trade no matter what.",trade_log,extra_data
+"INOD covered calls this week
+Prepared for covered calls this week for INOD
+
+2 weeks ago acquired shares.
+
+This week multiple catalysts:
+
+--Analysis indicating another beat of EPS and Revenue on the 6th.
+
+--Positive results from software and AI, PLTR, MSFT, AMZN
+
+Catalysts causing price to ramp up.
+
+Strategy, Jan 2027 70 strike, 80 strike, 90 strike, 100 strike
+
+About 4250 premium at this time.",trade_log,extra_data
+"Today Was Glorious!
+I hope you got a piece of today's action! Today was glorious!
+
+All reloaded for the next couple of days! Short calls and puts are the short duration DTEs and a few long call LEAPs are the 2027 & 2028 DTEs.
+Today was a very very good day! I nearly made my ""weekly"" goal just today! 90% of my goal for this week, I made.
+How'd you all do?
+Any particular trade you did well on today that you're stoked about?
+I did a small earnings play with PLTR at the very end of the day, I sold a put for $4 and I'll buy it back tomorrow at 50 cents I'm guessing from what I saw in extended market when PLTR announced earnings and guidance.
+I hope ya all did well and can do it again tomorrow. Cheers!",trade_log,extra_data
+"ITM assignment problem
+On IBKR, I was short the STX Jul '31 call spread 840 - 915 in the beginning of the week, and then momo rallied it on 880+ on thursday open. I hedged partially +25 shares and held it. On Friday (expiration day) it bumped higher to 900-910 and I wanted to hold it, so I hedged further by moving the lower strike to 860 for 13.75 debit. Up to this point I thought everything was cool and I was ready for the weekend, but then I got a margin call about 11:36 ET. Not knowing what would happen if I got assigned because this would have taken 67k margin. I decided in panic to close the short wing at 15:20 which was at 16.25 debit and sold the hedge with profit, overall I lost about 1k (the initial credit spread was an iron condor). However if I held for 1 more hour, I would have realized 1.6-1.8k profit.
+
+Lesson learned to not hold so tightly on borrowed margin :)",trade_log,extra_data
+"Blessed from God
+Wednesday, the 29th, I sold the Micron 717.5 put at 12:54 for .17c. For 6 minutes time I made 17 dollars as the stock never bounced below 738 in that 6 minutes. Thursday morning I woke up at 645 am, market had been open for 15 minutes, opened E-Trade app and saw the alert that read option assigned and 71500$ debited from my account. Checked portfolio and saw micron 100 shares with a 12000 dollar profit at 830 a share. Sold immediately and took the money. Never will I know why someone exercised the option when the price was 20 dollars higher. Thank you lord",trade_log,extra_data

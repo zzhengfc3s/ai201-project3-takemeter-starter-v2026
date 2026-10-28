@@ -595,25 +595,26 @@ I should not have a labelling issue since my agreement rate is 97% with the 1/30
 ## The Improvement
 
 **What I changed:**
-
+I added 30 more posts for `trade_log` label.
 **Which diagnosis pointed at it:**
+Criteria 5: too few examples for a label.
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1. Overall classification accuracy is at least 50% |  |  |  |  |  |
-| 2. No single label accounts for more than 60% of the total dataset. |  |  |  |  |  |
-| 3. When another human or AI model labels against the 20 cold labeled posts, atleast 80% should be in agreement. |  |  |  |  |  |
-| 4. The accuracy of the most confident third should atleast be 85%. |  |  |  |  |  |
-| 5. The precision score for trade_log label is atleast 90% |  |  |  |  |  |
+| 1. Overall classification accuracy is at least 50% | 0.50 | 0.51 | 0.51 | 0.51 | 3/3 |
+| 2. No single label accounts for more than 60% of the total dataset. | 0.60 | 0.50 | 0.50 | 0.50 | 3/3 |
+| 3. When another human or AI model labels against the 20 cold labeled posts, atleast 80% should be in agreement. | 0.80 | 0.80 | 0.80 | 0.80 | 3/3 |
+| 4. The accuracy of the most confident third should atleast be 85%. | 0.85 | 0.82 | 0.82 | 0.82 | 0/3 |
+| 5. The precision score for trade_log label is atleast 90% | 0.90 | 0.0 | 0.0 | 0.0 | 0/3 |
 
 **Did it help, and how do I know:**
 
 <!-- If it didn't, say so. Relabelling that didn't help is a genuinely
      interesting result and earns full credit. -->
 
-
+It didn't help resolve my criteria 5 that I thought this would fix. However it did improve Criteria 4 closer to target, went from 0.7/0.7/0.8 to 0.82 across all 3 runs. Which does makes sense since criteria 4 failure is lack of data. The overall accuracy drop from 0.6 to 0.51 was surprising.
 
 ---
 
@@ -621,13 +622,29 @@ I should not have a labelling issue since my agreement rate is 97% with the 1/30
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
+Criteria 4 MISSED: I would collect 30 more posts for each of the remaining low sample labels `platform` and `market_opinion`. I stopped because ran out of time to collect more posts, gathering 30 more posts for `trade_log` took longer than I thought.
 
+Critera 5 MISSED: Since the extra 30 posts didn't improve the precision score for `trade_log`, I would re-evaluate the post's label and maybe my decision rule. I stopped because ran out of time.
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
 
+I meant my labels to capture four categories of the options trading. However the model didn't learn the label classifications but just majority class collapse into predicting `educational` for all inputs.
 
+| true \ predicted | educational | trade_log | market_opinion | platform |
+|---|---|---|---|---|
+| **educational** | 18 | 0 | 0 | 0 |
+| **trade_log** | 9 | 0 | 0 | 0 |
+| **market_opinion** | 4 | 0 | 0 | 0 |
+| **platform** | 4 | 0 | 0 | 0 |
+
+Biggest confusion: 9 real `trade_log` posts called `educational`.
+The other direction: 0 real `educational` posts called `trade_log`.
+
+That's lopsided — the model leans toward `educational` on this pair.
+A direction like that usually points at your labelling rather than the
+model. Your agreement report is the thing that can tell you which.
 
 <!-- ═════════════════════════════════════════════════════════════════════
 
